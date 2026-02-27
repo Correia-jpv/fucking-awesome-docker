@@ -19,7 +19,6 @@ Please read and follow the [Code of Conduct](./CODE_OF_CONDUCT.md).
 - Prefer GitHub project/repository URLs over marketing pages.
 - Keep entries alphabetically sorted within their section.
 - Keep descriptions concise and concrete.
-- Use `:construction:` for WIP projects.
 - Use `:heavy_dollar_sign:` for paid/commercial services.
 - Do not use `:skull:`; archived/deprecated projects should be removed.
 - Avoid duplicate links and redirect variants.

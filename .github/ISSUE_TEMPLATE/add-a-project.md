@@ -12,7 +12,7 @@ Repository link:
 Description (one sentence):
 Author:
 Why this should be in the list:
-Notes (`:construction:` or `:heavy_dollar_sign:` if relevant):
+Notes (`:heavy_dollar_sign:` if relevant):
 
 Or directly write it:
 

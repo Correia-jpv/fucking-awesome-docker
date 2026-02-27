@@ -81,7 +81,6 @@ All the links are monitored and tested with a home baked [Node.js script](https:
 
 # Legend
 
--   Beta :construction:
 -   Monetized :heavy_dollar_sign:
 
 # What is Docker
