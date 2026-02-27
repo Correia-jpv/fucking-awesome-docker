@@ -47,7 +47,7 @@ func (i Issue) String() string {
 func CheckEntry(e parser.Entry) []Issue {
 	var issues []Issue
 
-	if len(e.Description) > 0 && !unicode.IsUpper(rune(e.Description[0])) {
+	if first, ok := firstLetter(e.Description); ok && !unicode.IsUpper(first) {
 		issues = append(issues, Issue{
 			Rule:     RuleDescriptionCapital,
 			Severity: SeverityError,
@@ -106,13 +106,28 @@ func CheckDuplicates(entries []parser.Entry) []Issue {
 	return issues
 }
 
+// firstLetter returns the first unicode letter in s and true, or zero and false if none.
+func firstLetter(s string) (rune, bool) {
+	for _, r := range s {
+		if unicode.IsLetter(r) {
+			return r, true
+		}
+	}
+	return 0, false
+}
+
 // FixEntry returns a copy of the entry with auto-fixable issues corrected.
 func FixEntry(e parser.Entry) parser.Entry {
 	fixed := e
 	if len(fixed.Description) > 0 {
-		// Capitalize first letter
+		// Capitalize first letter (find it, may not be at index 0)
 		runes := []rune(fixed.Description)
-		runes[0] = unicode.ToUpper(runes[0])
+		for i, r := range runes {
+			if unicode.IsLetter(r) {
+				runes[i] = unicode.ToUpper(r)
+				break
+			}
+		}
 		fixed.Description = string(runes)
 
 		// Ensure period at end

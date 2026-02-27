@@ -91,7 +91,11 @@ func lintCmd() *cobra.Command {
 				if !fix {
 					return fmt.Errorf("lint failed with %d errors", result.Errors)
 				}
-				fmt.Println("Auto-fix mode: --fix is not yet fully implemented for file rewriting")
+				count, err := linter.FixFile(readmePath)
+				if err != nil {
+					return fmt.Errorf("fix: %w", err)
+				}
+				fmt.Printf("Fixed %d lines in %s\n", count, readmePath)
 			} else {
 				fmt.Printf("OK: %d warnings\n", result.Warnings)
 			}

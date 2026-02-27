@@ -9,7 +9,11 @@ import (
 )
 
 // entryRe matches: - [Name](URL) - Description
-var entryRe = regexp.MustCompile(`^[-*]\s+\[([^\]]+)\]\(([^)]+)\)\s+-\s+(.+)$`)
+// Also handles optional markers/text between URL and " - " separator, e.g.:
+//
+//	- [Name](URL) :skull: - Description
+//	- [Name](URL) (2) :skull: - Description
+var entryRe = regexp.MustCompile(`^[-*]\s+\[([^\]]+)\]\(([^)]+)\)(.*?)\s+-\s+(.+)$`)
 
 // headingRe matches markdown headings: # Title, ## Title, etc.
 var headingRe = regexp.MustCompile(`^(#{1,6})\s+(.+?)(?:\s*<!--.*-->)?$`)
@@ -27,12 +31,15 @@ func ParseEntry(line string, lineNum int) (Entry, error) {
 		return Entry{}, fmt.Errorf("line %d: not a valid entry: %q", lineNum, line)
 	}
 
-	desc := m[3]
+	middle := m[3] // text between URL closing paren and " - "
+	desc := m[4]
 	var markers []Marker
 
+	// Extract markers from both the middle section and the description
 	for text, marker := range markerMap {
-		if strings.Contains(desc, text) {
+		if strings.Contains(middle, text) || strings.Contains(desc, text) {
 			markers = append(markers, marker)
+			middle = strings.ReplaceAll(middle, text, "")
 			desc = strings.ReplaceAll(desc, text, "")
 		}
 	}
