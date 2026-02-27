@@ -200,6 +200,12 @@ func healthCmd() *cobra.Command {
 			for _, e := range errs {
 				fmt.Printf("  error: %v\n", e)
 			}
+			if len(infos) == 0 {
+				if len(errs) > 0 {
+					return fmt.Errorf("failed to fetch GitHub metadata for all repositories (%d errors); check network/DNS and GITHUB_TOKEN", len(errs))
+				}
+				return fmt.Errorf("no GitHub repositories found in README")
+			}
 
 			scored := scorer.ScoreAll(infos)
 			cacheEntries := scorer.ToCacheEntries(scored)

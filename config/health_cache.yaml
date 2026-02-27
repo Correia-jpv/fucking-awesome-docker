@@ -1,0 +1,2122 @@
+entries:
+    - url: https://github.com/byrnedo/capitan
+      name: byrnedo/capitan
+      status: stale
+      stars: 31
+      last_push: 2017-06-07T09:46:56Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/magicmark/composerize
+      name: magicmark/composerize
+      status: healthy
+      stars: 3701
+      forks: 247
+      last_push: 2026-01-17T12:14:28Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/polonskiy/crowdr
+      name: polonskiy/crowdr
+      status: stale
+      stars: 98
+      forks: 9
+      last_push: 2020-10-09T07:57:52Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ctk-hq/ctk
+      name: ctk-hq/ctk
+      status: healthy
+      stars: 298
+      forks: 27
+      last_push: 2026-02-15T22:53:00Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/sudo-bmitch/docker-config-update
+      name: sudo-bmitch/docker-config-update
+      status: stale
+      stars: 51
+      forks: 8
+      last_push: 2023-03-30T13:03:12Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/cisco/elsy
+      name: cisco/elsy
+      status: stale
+      stars: 80
+      forks: 22
+      last_push: 2022-01-18T13:38:49Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/cloud66-oss/habitus
+      name: cloud66-oss/habitus
+      status: stale
+      stars: 1390
+      forks: 82
+      last_push: 2020-02-05T17:10:30Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/kubernetes/kompose
+      name: kubernetes/kompose
+      status: healthy
+      stars: 10459
+      forks: 793
+      last_push: 2026-02-27T14:23:27Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/av/harbor
+      name: av/harbor
+      status: healthy
+      stars: 2470
+      forks: 164
+      last_push: 2026-02-15T00:04:21Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ihucos/plash
+      name: ihucos/plash
+      status: healthy
+      stars: 387
+      forks: 15
+      last_push: 2025-03-20T15:47:21Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/containers/podman-compose
+      name: containers/podman-compose
+      status: healthy
+      stars: 5973
+      forks: 576
+      last_push: 2026-02-26T23:05:51Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/alexaandrov/stitchocker
+      name: alexaandrov/stitchocker
+      status: inactive
+      stars: 30
+      forks: 3
+      last_push: 2024-03-14T13:50:30Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ethibox/awesome-stacks
+      name: ethibox/awesome-stacks
+      status: healthy
+      stars: 1245
+      forks: 162
+      last_push: 2026-02-25T16:10:25Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/newrelic/centurion
+      name: newrelic/centurion
+      status: archived
+      stars: 1757
+      forks: 112
+      last_push: 2025-09-11T20:47:50Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/brooklyncentral/clocker
+      name: brooklyncentral/clocker
+      status: stale
+      stars: 429
+      forks: 65
+      last_push: 2018-10-24T15:29:12Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ehazlett/conduit
+      name: ehazlett/conduit
+      status: stale
+      stars: 108
+      forks: 11
+      last_push: 2016-11-07T18:20:56Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ContainX/depcon
+      name: ContainX/depcon
+      status: stale
+      stars: 93
+      forks: 15
+      last_push: 2018-06-05T04:40:23Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/deploystackio/docker-to-iac
+      name: deploystackio/docker-to-iac
+      status: healthy
+      stars: 23
+      last_push: 2026-02-25T22:52:42Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hasura/gitkube
+      name: hasura/gitkube
+      status: stale
+      stars: 3850
+      forks: 203
+      last_push: 2023-08-31T07:48:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/grafeas/grafeas
+      name: grafeas/grafeas
+      status: healthy
+      stars: 1564
+      forks: 307
+      last_push: 2026-02-13T21:53:15Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/LombardiDaniel/swarm-ansible
+      name: LombardiDaniel/swarm-ansible
+      status: healthy
+      stars: 58
+      forks: 4
+      last_push: 2026-01-24T22:01:08Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hansehe/SwarmManagement
+      name: hansehe/SwarmManagement
+      status: healthy
+      stars: 21
+      forks: 1
+      last_push: 2025-05-13T15:24:25Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/werf/werf
+      name: werf/werf
+      status: healthy
+      stars: 4659
+      forks: 230
+      last_push: 2026-02-27T21:26:34Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/willfarrell/docker-autoheal
+      name: willfarrell/docker-autoheal
+      status: healthy
+      stars: 1800
+      forks: 253
+      last_push: 2025-09-09T16:33:25Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/google/cadvisor
+      name: google/cadvisor
+      status: healthy
+      stars: 18913
+      forks: 2460
+      last_push: 2026-02-19T21:28:50Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/bluewave-labs/checkmate
+      name: bluewave-labs/checkmate
+      status: healthy
+      stars: 9321
+      forks: 674
+      last_push: 2026-02-27T16:58:09Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/zorak1103/dlia
+      name: zorak1103/dlia
+      status: healthy
+      stars: 3
+      last_push: 2026-02-27T11:12:38Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/deltaskelta/docker-alertd
+      name: deltaskelta/docker-alertd
+      status: stale
+      stars: 108
+      forks: 12
+      last_push: 2017-11-15T04:40:06Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/docker-flow/docker-flow-monitor
+      name: docker-flow/docker-flow-monitor
+      status: stale
+      stars: 88
+      forks: 38
+      last_push: 2021-03-17T14:33:01Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/stefanprodan/dockprom
+      name: stefanprodan/dockprom
+      status: healthy
+      stars: 6484
+      forks: 1769
+      last_push: 2025-07-04T04:18:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/amerkurev/doku
+      name: amerkurev/doku
+      status: healthy
+      stars: 408
+      forks: 18
+      last_push: 2025-12-26T09:13:21Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/nicolargo/glances
+      name: nicolargo/glances
+      status: healthy
+      stars: 31804
+      forks: 1688
+      last_push: 2026-02-27T09:35:02Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dromara/hertzbeat
+      name: dromara/hertzbeat
+      status: healthy
+      stars: 7103
+      forks: 1255
+      last_push: 2026-02-27T16:10:50Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/vegasbrianc/docker-monitoring
+      name: vegasbrianc/docker-monitoring
+      status: stale
+      stars: 473
+      forks: 129
+      last_push: 2018-06-10T20:53:49Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/gliderlabs/logspout
+      name: gliderlabs/logspout
+      status: stale
+      stars: 4700
+      forks: 669
+      last_push: 2023-07-11T20:36:12Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/decryptus/monit-docker
+      name: decryptus/monit-docker
+      status: stale
+      stars: 34
+      forks: 5
+      last_push: 2023-01-16T11:31:14Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/NexClipper/NexClipper
+      name: NexClipper/NexClipper
+      status: stale
+      stars: 566
+      forks: 72
+      last_push: 2023-05-05T02:21:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/uschtwill/docker_monitoring_logging_alerting
+      name: uschtwill/docker_monitoring_logging_alerting
+      status: stale
+      stars: 540
+      forks: 119
+      last_push: 2018-09-13T07:36:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/runsidekick/sidekick
+      name: runsidekick/sidekick
+      status: stale
+      stars: 1611
+      forks: 67
+      last_push: 2023-06-29T12:18:38Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/gpulido/SwarmAlert
+      name: gpulido/SwarmAlert
+      status: stale
+      stars: 22
+      forks: 2
+      last_push: 2019-11-27T12:17:14Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/gomex/docker-zabbix
+      name: gomex/docker-zabbix
+      status: stale
+      stars: 53
+      forks: 12
+      last_push: 2017-07-28T14:29:08Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/monitoringartist/Zabbix-Docker-Monitoring
+      name: monitoringartist/Zabbix-Docker-Monitoring
+      status: stale
+      stars: 1197
+      forks: 265
+      last_push: 2022-02-22T17:01:39Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/coreos/flannel
+      name: coreos/flannel
+      status: healthy
+      stars: 9406
+      forks: 2898
+      last_push: 2026-02-23T14:17:42Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Microsoft/Freeflow
+      name: Microsoft/Freeflow
+      status: stale
+      stars: 632
+      forks: 96
+      last_push: 2023-06-12T19:30:22Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jason5ng32/MyIP
+      name: jason5ng32/MyIP
+      status: healthy
+      stars: 9859
+      forks: 1072
+      last_push: 2026-02-10T07:38:47Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/nicolaka/netshoot
+      name: nicolaka/netshoot
+      status: healthy
+      stars: 10421
+      forks: 1085
+      last_push: 2026-01-28T16:42:51Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jpetazzo/pipework
+      name: jpetazzo/pipework
+      status: inactive
+      stars: 4251
+      forks: 727
+      last_push: 2024-11-04T17:31:57Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Peco602/ansible-linux-docker
+      name: Peco602/ansible-linux-docker
+      status: stale
+      stars: 37
+      forks: 4
+      last_push: 2023-06-21T09:34:02Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/athena-oss/athena
+      name: athena-oss/athena
+      status: stale
+      stars: 96
+      forks: 25
+      last_push: 2017-07-06T08:26:12Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/CloudSlang/cloud-slang
+      name: CloudSlang/cloud-slang
+      status: healthy
+      stars: 240
+      forks: 83
+      last_push: 2026-02-18T13:38:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/clusterdock/clusterdock
+      name: clusterdock/clusterdock
+      status: stale
+      stars: 29
+      forks: 8
+      last_push: 2023-05-16T18:05:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Dataman-Cloud/crane
+      name: Dataman-Cloud/crane
+      status: stale
+      stars: 749
+      forks: 164
+      last_push: 2023-08-31T09:46:38Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/docker-flow/docker-flow-swarm-listener
+      name: docker-flow/docker-flow-swarm-listener
+      status: stale
+      stars: 69
+      forks: 50
+      last_push: 2019-05-20T19:40:37Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Wowu/docker-rollout
+      name: Wowu/docker-rollout
+      status: healthy
+      stars: 3104
+      forks: 93
+      last_push: 2025-07-25T17:57:48Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/codeabovelab/haven-platform
+      name: codeabovelab/haven-platform
+      status: stale
+      stars: 296
+      forks: 41
+      last_push: 2018-07-06T11:21:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/kubernetes/kubernetes
+      name: kubernetes/kubernetes
+      status: healthy
+      stars: 120812
+      forks: 42554
+      last_push: 2026-02-27T20:09:31Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ManageIQ/manageiq
+      name: ManageIQ/manageiq
+      status: healthy
+      stars: 1387
+      forks: 923
+      last_push: 2026-02-27T17:24:52Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/apache/mesos
+      name: apache/mesos
+      status: inactive
+      stars: 5365
+      forks: 1669
+      last_push: 2024-08-23T18:59:16Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hashicorp/nomad
+      name: hashicorp/nomad
+      status: healthy
+      stars: 16237
+      forks: 2059
+      last_push: 2026-02-27T21:40:19Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/rancher/rancher
+      name: rancher/rancher
+      status: healthy
+      stars: 25387
+      forks: 3170
+      last_push: 2026-02-27T21:04:04Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/redherd-project/redherd-framework
+      name: redherd-project/redherd-framework
+      status: stale
+      stars: 74
+      forks: 17
+      last_push: 2023-04-25T18:54:33Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/crazy-max/swarm-cronjob
+      name: crazy-max/swarm-cronjob
+      status: healthy
+      stars: 862
+      forks: 74
+      last_push: 2026-02-27T07:02:23Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/caprover/caprover
+      name: caprover/caprover
+      status: healthy
+      stars: 14878
+      forks: 964
+      last_push: 2026-01-31T15:42:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/convox/rack
+      name: convox/rack
+      status: healthy
+      stars: 1893
+      forks: 177
+      last_push: 2026-02-12T19:55:53Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/pbertera/dcw
+      name: pbertera/dcw
+      status: stale
+      stars: 17
+      forks: 3
+      last_push: 2017-03-29T07:55:37Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dokku/dokku
+      name: dokku/dokku
+      status: healthy
+      stars: 31878
+      forks: 2021
+      last_push: 2026-02-27T13:54:30Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/remind101/empire
+      name: remind101/empire
+      status: stale
+      stars: 2682
+      forks: 156
+      last_push: 2023-11-25T17:16:08Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/exoframejs/exoframe
+      name: exoframejs/exoframe
+      status: healthy
+      stars: 1147
+      forks: 59
+      last_push: 2026-02-22T16:24:52Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/teamhephy/workflow
+      name: teamhephy/workflow
+      status: stale
+      stars: 419
+      forks: 36
+      last_push: 2023-09-27T17:30:49Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/krane/krane
+      name: krane/krane
+      status: stale
+      stars: 80
+      forks: 8
+      last_push: 2023-05-11T20:39:00Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/nanobox-io/nanobox
+      name: nanobox-io/nanobox
+      status: stale
+      stars: 1624
+      forks: 90
+      last_push: 2019-10-21T20:03:10Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/tsuru/tsuru
+      name: tsuru/tsuru
+      status: healthy
+      stars: 5252
+      forks: 550
+      last_push: 2026-02-25T21:15:57Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/bunkerity/bunkerweb
+      name: bunkerity/bunkerweb
+      status: healthy
+      stars: 10066
+      forks: 565
+      last_push: 2026-02-27T08:50:00Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lucaslorentz/caddy-docker-proxy
+      name: lucaslorentz/caddy-docker-proxy
+      status: healthy
+      stars: 4300
+      forks: 210
+      last_push: 2026-02-25T20:22:54Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/invzhi/caddy-docker-upstreams
+      name: invzhi/caddy-docker-upstreams
+      status: healthy
+      stars: 36
+      forks: 8
+      last_push: 2025-09-08T05:17:01Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/moonbuggy/docker-dnsmasq-updater
+      name: moonbuggy/docker-dnsmasq-updater
+      status: inactive
+      stars: 35
+      forks: 2
+      last_push: 2025-02-09T00:21:52Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/docker-flow/docker-flow-proxy
+      name: docker-flow/docker-flow-proxy
+      status: healthy
+      stars: 321
+      forks: 189
+      last_push: 2025-12-05T02:29:16Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/fabiolb/fabio
+      name: fabiolb/fabio
+      status: healthy
+      stars: 7332
+      forks: 624
+      last_push: 2026-02-23T02:48:11Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/nginx-proxy/docker-letsencrypt-nginx-proxy-companion
+      name: nginx-proxy/docker-letsencrypt-nginx-proxy-companion
+      status: healthy
+      stars: 7698
+      forks: 835
+      last_push: 2026-02-15T12:34:13Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Yundera/mesh-router
+      name: Yundera/mesh-router
+      status: healthy
+      stars: 8
+      last_push: 2026-02-27T21:23:25Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jc21/nginx-proxy-manager
+      name: jc21/nginx-proxy-manager
+      status: healthy
+      stars: 31873
+      forks: 3627
+      last_push: 2026-02-27T00:35:00Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Safe3/openresty-manager
+      name: Safe3/openresty-manager
+      status: healthy
+      stars: 1317
+      forks: 97
+      last_push: 2026-01-25T10:38:42Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/flavioaiello/swarm-router
+      name: flavioaiello/swarm-router
+      status: healthy
+      stars: 73
+      forks: 12
+      last_push: 2025-09-15T06:12:30Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/containous/traefik
+      name: containous/traefik
+      status: healthy
+      stars: 61956
+      forks: 5848
+      last_push: 2026-02-27T15:30:05Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/cri-o/cri-o
+      name: cri-o/cri-o
+      status: healthy
+      stars: 5579
+      forks: 1147
+      last_push: 2026-02-27T21:48:13Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lxc/lxc
+      name: lxc/lxc
+      status: healthy
+      stars: 5115
+      forks: 1162
+      last_push: 2026-02-26T19:40:10Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/containers/libpod
+      name: containers/libpod
+      status: healthy
+      stars: 30828
+      forks: 2995
+      last_push: 2026-02-26T02:13:27Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/brauner/rlxc
+      name: brauner/rlxc
+      status: stale
+      stars: 18
+      forks: 3
+      last_push: 2021-06-30T13:12:28Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/opencontainers/runtime-tools
+      name: opencontainers/runtime-tools
+      status: healthy
+      stars: 472
+      forks: 159
+      last_push: 2025-12-05T00:49:12Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/SongStitch/anchor
+      name: SongStitch/anchor
+      status: inactive
+      stars: 24
+      last_push: 2025-01-15T23:09:06Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/genuinetools/bane
+      name: genuinetools/bane
+      status: stale
+      stars: 1225
+      forks: 91
+      last_push: 2020-09-17T20:10:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dash14/buildcage
+      name: dash14/buildcage
+      status: healthy
+      stars: 3
+      last_push: 2026-02-23T08:57:48Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hectorm/cetusguard
+      name: hectorm/cetusguard
+      status: healthy
+      stars: 82
+      forks: 2
+      last_push: 2026-02-09T12:53:32Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/bridgecrewio/checkov
+      name: bridgecrewio/checkov
+      status: healthy
+      stars: 8487
+      forks: 1306
+      last_push: 2026-02-24T10:20:12Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dev-sec/cis-docker-benchmark
+      name: dev-sec/cis-docker-benchmark
+      status: stale
+      stars: 524
+      forks: 118
+      last_push: 2023-05-02T12:59:10Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/quay/clair
+      name: quay/clair
+      status: healthy
+      stars: 10932
+      forks: 1195
+      last_push: 2026-02-25T21:52:05Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/wolffcatskyy/crowdsec-blocklist-import
+      name: wolffcatskyy/crowdsec-blocklist-import
+      status: healthy
+      stars: 175
+      forks: 4
+      last_push: 2026-02-26T20:00:21Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/eliasgranderubio/dagda
+      name: eliasgranderubio/dagda
+      status: stale
+      stars: 1219
+      forks: 169
+      last_push: 2023-05-23T02:03:43Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/deepfence/ThreatMapper
+      name: deepfence/ThreatMapper
+      status: healthy
+      stars: 5235
+      forks: 640
+      last_push: 2026-01-08T17:51:41Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/docker/docker-bench-security
+      name: docker/docker-bench-security
+      status: inactive
+      stars: 9599
+      forks: 1036
+      last_push: 2024-10-21T07:26:06Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/google/docker-explorer
+      name: google/docker-explorer
+      status: inactive
+      stars: 552
+      forks: 45
+      last_push: 2024-10-04T07:44:31Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Peco602/dvwassl
+      name: Peco602/dvwassl
+      status: stale
+      stars: 6
+      forks: 4
+      last_push: 2023-04-30T17:03:01Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/checkmarx/kics
+      name: checkmarx/kics
+      status: healthy
+      stars: 2575
+      forks: 360
+      last_push: 2026-02-27T12:39:43Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/theupdateframework/notary
+      name: theupdateframework/notary
+      status: archived
+      stars: 3288
+      forks: 520
+      last_push: 2024-08-07T19:02:32Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/OpenSCAP/openscap
+      name: OpenSCAP/openscap
+      status: healthy
+      stars: 1672
+      forks: 421
+      last_push: 2026-02-27T12:44:50Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dormstern/segspec
+      name: dormstern/segspec
+      status: healthy
+      stars: 15
+      last_push: 2026-02-23T11:39:00Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/anchore/syft
+      name: anchore/syft
+      status: healthy
+      stars: 8429
+      forks: 776
+      last_push: 2026-02-27T19:38:05Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/falcosecurity/falco
+      name: falcosecurity/falco
+      status: healthy
+      stars: 8694
+      forks: 989
+      last_push: 2026-02-27T12:34:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/aquasecurity/trivy
+      name: aquasecurity/trivy
+      status: healthy
+      stars: 32289
+      forks: 2977
+      last_push: 2026-02-26T18:00:30Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/bytesharky/docker-dns
+      name: bytesharky/docker-dns
+      status: healthy
+      stars: 3
+      forks: 1
+      last_push: 2025-12-26T02:44:43Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/etcd-io/etcd
+      name: etcd-io/etcd
+      status: healthy
+      stars: 51580
+      forks: 10330
+      last_push: 2026-02-27T21:04:29Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/istio/istio
+      name: istio/istio
+      status: healthy
+      stars: 38054
+      forks: 8250
+      last_push: 2026-02-27T22:16:29Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/gliderlabs/registrator
+      name: gliderlabs/registrator
+      status: healthy
+      stars: 4677
+      forks: 909
+      last_push: 2025-05-22T04:16:52Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/minio/minio
+      name: minio/minio
+      status: archived
+      stars: 60392
+      forks: 7138
+      last_push: 2026-02-12T20:18:51Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Storidge/quick-start
+      name: Storidge/quick-start
+      status: stale
+      stars: 1
+      forks: 1
+      last_push: 2019-09-09T21:42:15Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/AbianS/docker-db-manager
+      name: AbianS/docker-db-manager
+      status: healthy
+      stars: 155
+      forks: 5
+      last_push: 2025-11-26T09:24:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/felixgborrego/simple-docker-ui
+      name: felixgborrego/simple-docker-ui
+      status: inactive
+      stars: 607
+      forks: 96
+      last_push: 2024-09-06T09:31:07Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/slonopotamus/stevedore
+      name: slonopotamus/stevedore
+      status: healthy
+      stars: 368
+      forks: 13
+      last_push: 2026-02-27T11:51:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jr-k/d4s
+      name: jr-k/d4s
+      status: healthy
+      stars: 51
+      forks: 4
+      last_push: 2026-02-24T00:58:30Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/wagoodman/dive
+      name: wagoodman/dive
+      status: healthy
+      stars: 53433
+      forks: 1949
+      last_push: 2025-12-15T17:20:36Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lirantal/dockly
+      name: lirantal/dockly
+      status: healthy
+      stars: 4011
+      forks: 163
+      last_push: 2026-02-01T19:31:17Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/shubh-io/dockmate
+      name: shubh-io/dockmate
+      status: healthy
+      stars: 276
+      forks: 5
+      last_push: 2026-01-14T06:52:19Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/GhostWriters/DockSTARTer
+      name: GhostWriters/DockSTARTer
+      status: healthy
+      stars: 2543
+      forks: 291
+      last_push: 2026-02-25T19:44:53Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/durableprogramming/dprs
+      name: durableprogramming/dprs
+      status: healthy
+      stars: 36
+      forks: 1
+      last_push: 2026-02-12T20:14:04Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/moncho/dry
+      name: moncho/dry
+      status: healthy
+      stars: 3222
+      forks: 102
+      last_push: 2026-02-27T23:13:28Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ajayd-san/gomanagedocker
+      name: ajayd-san/gomanagedocker
+      status: inactive
+      stars: 632
+      forks: 26
+      last_push: 2024-12-28T07:44:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jesseduffield/lazydocker
+      name: jesseduffield/lazydocker
+      status: healthy
+      stars: 49901
+      forks: 1577
+      last_push: 2026-01-17T06:16:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Lifailon/lazyjournal
+      name: Lifailon/lazyjournal
+      status: healthy
+      stars: 1132
+      forks: 27
+      last_push: 2026-02-25T09:43:40Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mrjackwills/oxker
+      name: mrjackwills/oxker
+      status: healthy
+      stars: 1536
+      forks: 41
+      last_push: 2026-02-23T15:18:34Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jenssegers/captain
+      name: jenssegers/captain
+      status: stale
+      stars: 244
+      forks: 11
+      last_push: 2022-12-08T07:39:21Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Falldog/dcinja
+      name: Falldog/dcinja
+      status: healthy
+      stars: 13
+      forks: 3
+      last_push: 2025-06-26T12:33:01Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/exdx/dcp
+      name: exdx/dcp
+      status: stale
+      stars: 114
+      forks: 3
+      last_push: 2023-07-24T01:09:54Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/FabienD/docker-stack
+      name: FabienD/docker-stack
+      status: healthy
+      stars: 22
+      forks: 2
+      last_push: 2026-02-04T08:56:30Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/s0rg/decompose
+      name: s0rg/decompose
+      status: healthy
+      stars: 123
+      forks: 6
+      last_push: 2025-12-19T20:03:44Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/christian-korneck/docker-pushrm
+      name: christian-korneck/docker-pushrm
+      status: inactive
+      stars: 148
+      forks: 3
+      last_push: 2024-06-10T21:42:09Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lucabello/docker-captain
+      name: lucabello/docker-captain
+      status: healthy
+      stars: 2
+      last_push: 2026-02-21T00:13:43Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mayflower/docker-ls
+      name: mayflower/docker-ls
+      status: archived
+      stars: 456
+      forks: 68
+      last_push: 2023-08-31T06:44:18Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/howtowhale/dvm
+      name: howtowhale/dvm
+      status: stale
+      stars: 524
+      forks: 50
+      last_push: 2022-03-30T13:23:11Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/iamsoorena/goinside
+      name: iamsoorena/goinside
+      status: stale
+      stars: 30
+      forks: 2
+      last_push: 2020-10-17T20:31:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/g31s/Pdocker
+      name: g31s/Pdocker
+      status: stale
+      stars: 7
+      forks: 2
+      last_push: 2021-02-27T06:42:13Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/shiwaforce/poco
+      name: shiwaforce/poco
+      status: healthy
+      stars: 109
+      forks: 6
+      last_push: 2026-02-24T16:23:44Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/JonathonReinhart/scuba
+      name: JonathonReinhart/scuba
+      status: healthy
+      stars: 96
+      forks: 17
+      last_push: 2026-01-26T04:03:05Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/containers/skopeo
+      name: containers/skopeo
+      status: healthy
+      stars: 10502
+      forks: 907
+      last_push: 2026-02-27T15:31:34Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/segersniels/supdock
+      name: segersniels/supdock
+      status: healthy
+      stars: 86
+      forks: 3
+      last_push: 2026-02-23T13:29:54Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/qazbnm456/tsaotun
+      name: qazbnm456/tsaotun
+      status: stale
+      stars: 58
+      forks: 3
+      last_push: 2022-10-04T06:53:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/vutran/dext-docker-registry-plugin
+      name: vutran/dext-docker-registry-plugin
+      status: stale
+      stars: 4
+      forks: 1
+      last_push: 2017-01-10T03:04:36Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jeroenpeeters/docker-ssh
+      name: jeroenpeeters/docker-ssh
+      status: stale
+      stars: 660
+      forks: 89
+      last_push: 2018-04-11T20:24:08Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/marty90/multidocker
+      name: marty90/multidocker
+      status: stale
+      stars: 56
+      forks: 9
+      last_push: 2018-11-27T15:12:56Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/adrianmo/powerline-docker
+      name: adrianmo/powerline-docker
+      status: stale
+      stars: 61
+      forks: 6
+      last_push: 2017-06-30T09:11:44Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/knrdl/casa
+      name: knrdl/casa
+      status: healthy
+      stars: 84
+      forks: 5
+      last_push: 2026-02-26T16:33:07Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/wrfly/container-web-tty
+      name: wrfly/container-web-tty
+      status: healthy
+      stars: 258
+      forks: 46
+      last_push: 2026-02-07T06:18:34Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ProductiveOps/dokemon
+      name: ProductiveOps/dokemon
+      status: stale
+      stars: 758
+      forks: 36
+      last_push: 2024-02-21T10:51:14Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/klausmeyer/docker-registry-browser
+      name: klausmeyer/docker-registry-browser
+      status: healthy
+      stars: 675
+      forks: 61
+      last_push: 2026-02-21T09:06:10Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mkuchin/docker-registry-web
+      name: mkuchin/docker-registry-web
+      status: stale
+      stars: 548
+      forks: 133
+      last_push: 2022-02-08T08:42:02Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dockersamples/docker-swarm-visualizer
+      name: dockersamples/docker-swarm-visualizer
+      status: inactive
+      stars: 3348
+      forks: 594
+      last_push: 2024-10-26T07:12:05Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/louislam/dockge
+      name: louislam/dockge
+      status: healthy
+      stars: 22251
+      forks: 705
+      last_push: 2026-01-21T10:51:44Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mbecker20/komodo
+      name: mbecker20/komodo
+      status: healthy
+      stars: 10397
+      forks: 276
+      last_push: 2026-02-27T22:21:17Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/kubevious/kubevious
+      name: kubevious/kubevious
+      status: stale
+      stars: 1693
+      forks: 95
+      last_push: 2024-01-15T18:42:38Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hywax/mafl
+      name: hywax/mafl
+      status: healthy
+      stars: 671
+      forks: 52
+      last_push: 2025-10-26T02:26:26Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/netdata/netdata
+      name: netdata/netdata
+      status: healthy
+      stars: 77906
+      forks: 6359
+      last_push: 2026-02-27T21:54:35Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/OctoLinker/OctoLinker
+      name: OctoLinker/OctoLinker
+      status: stale
+      stars: 5351
+      forks: 283
+      last_push: 2023-10-02T12:33:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/portainer/portainer
+      name: portainer/portainer
+      status: healthy
+      stars: 36692
+      forks: 2779
+      last_push: 2026-02-27T13:23:22Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ozlerhakan/rapid
+      name: ozlerhakan/rapid
+      status: stale
+      stars: 147
+      forks: 24
+      last_push: 2021-09-21T08:44:39Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/tobegit3hub/seagull
+      name: tobegit3hub/seagull
+      status: stale
+      stars: 1939
+      forks: 268
+      last_push: 2017-11-22T02:11:23Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/swarmpit/swarmpit
+      name: swarmpit/swarmpit
+      status: healthy
+      stars: 3407
+      forks: 312
+      last_push: 2026-01-25T16:08:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/cuigh/swirl
+      name: cuigh/swirl
+      status: stale
+      stars: 667
+      forks: 83
+      last_push: 2023-05-16T02:47:48Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/eclipse-theia/theia
+      name: eclipse-theia/theia
+      status: healthy
+      stars: 21381
+      forks: 2799
+      last_push: 2026-02-27T22:10:02Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/fr4nsys/usulnet
+      name: fr4nsys/usulnet
+      status: healthy
+      stars: 71
+      forks: 2
+      last_push: 2026-02-23T23:00:19Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/genuinetools/amicontained
+      name: genuinetools/amicontained
+      status: stale
+      stars: 1072
+      forks: 71
+      last_push: 2020-12-09T04:37:59Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/garywiz/chaperone
+      name: garywiz/chaperone
+      status: stale
+      stars: 178
+      forks: 31
+      last_push: 2020-07-16T21:30:27Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/nicomt/ckron
+      name: nicomt/ckron
+      status: healthy
+      stars: 56
+      forks: 6
+      last_push: 2026-02-15T17:58:14Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/GoogleContainerTools/distroless
+      name: GoogleContainerTools/distroless
+      status: healthy
+      stars: 22291
+      forks: 1361
+      last_push: 2026-02-27T21:06:10Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/gliderlabs/docker-alpine
+      name: gliderlabs/docker-alpine
+      status: stale
+      stars: 5719
+      forks: 530
+      last_push: 2021-04-01T08:02:51Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jwilder/docker-gen
+      name: jwilder/docker-gen
+      status: healthy
+      stars: 4616
+      forks: 615
+      last_push: 2026-02-13T13:22:38Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/powerman/dockerize
+      name: powerman/dockerize
+      status: healthy
+      stars: 195
+      forks: 17
+      last_push: 2026-02-23T15:53:51Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/tianon/gosu
+      name: tianon/gosu
+      status: healthy
+      stars: 4947
+      forks: 356
+      last_push: 2026-02-21T00:14:55Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/sindresorhus/is-docker
+      name: sindresorhus/is-docker
+      status: healthy
+      stars: 231
+      forks: 16
+      last_push: 2025-09-15T21:04:10Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ivanilves/lstags
+      name: ivanilves/lstags
+      status: stale
+      stars: 340
+      forks: 26
+      last_push: 2023-05-11T20:38:37Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/tarampampam/microcheck
+      name: tarampampam/microcheck
+      status: healthy
+      stars: 127
+      forks: 2
+      last_push: 2026-02-24T19:11:41Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mcuadros/ofelia
+      name: mcuadros/ofelia
+      status: healthy
+      stars: 3731
+      forks: 204
+      last_push: 2026-02-27T07:34:07Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/beyondssl/sparkview-container
+      name: beyondssl/sparkview-container
+      status: healthy
+      stars: 20
+      forks: 2
+      last_push: 2025-09-22T06:59:43Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ncopa/su-exec
+      name: ncopa/su-exec
+      status: healthy
+      stars: 1017
+      forks: 103
+      last_push: 2025-10-07T13:49:01Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/theAkito/sue
+      name: theAkito/sue
+      status: stale
+      stars: 13
+      forks: 1
+      last_push: 2022-04-26T21:10:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/aptible/supercronic
+      name: aptible/supercronic
+      status: healthy
+      stars: 2383
+      forks: 141
+      last_push: 2026-02-11T20:22:54Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/vorakl/TrivialRC
+      name: vorakl/TrivialRC
+      status: stale
+      stars: 31
+      forks: 5
+      last_push: 2023-12-20T00:39:55Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ansible-community/ansible-bender
+      name: ansible-community/ansible-bender
+      status: healthy
+      stars: 692
+      forks: 74
+      last_push: 2026-01-07T23:21:32Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/containers/buildah
+      name: containers/buildah
+      status: healthy
+      stars: 8633
+      forks: 879
+      last_push: 2026-02-27T18:52:32Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/moby/buildkit
+      name: moby/buildkit
+      status: healthy
+      stars: 9795
+      forks: 1373
+      last_push: 2026-02-27T15:45:57Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/cekit/cekit
+      name: cekit/cekit
+      status: healthy
+      stars: 113
+      forks: 44
+      last_push: 2026-01-30T15:06:33Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mutable/container-factory
+      name: mutable/container-factory
+      status: stale
+      stars: 64
+      forks: 3
+      last_push: 2015-05-06T16:07:53Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mdlavin/copy-docker-image
+      name: mdlavin/copy-docker-image
+      status: stale
+      stars: 38
+      forks: 16
+      last_push: 2018-08-29T08:27:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/alibaba/derrick
+      name: alibaba/derrick
+      status: stale
+      stars: 694
+      forks: 109
+      last_push: 2023-03-06T22:40:17Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/orisano/dlayer
+      name: orisano/dlayer
+      status: healthy
+      stars: 445
+      forks: 12
+      last_push: 2026-02-11T11:03:36Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mudler/docker-companion
+      name: mudler/docker-companion
+      status: healthy
+      stars: 47
+      forks: 9
+      last_push: 2025-05-28T08:17:46Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/CtripCloud/docker-make
+      name: CtripCloud/docker-make
+      status: stale
+      stars: 99
+      forks: 20
+      last_push: 2019-11-22T08:32:26Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/orf/docker-repack
+      name: orf/docker-repack
+      status: healthy
+      stars: 151
+      forks: 3
+      last_push: 2025-04-24T06:46:00Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/bcicen/docker-replay
+      name: bcicen/docker-replay
+      status: stale
+      stars: 203
+      forks: 13
+      last_push: 2018-10-13T13:09:28Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/swipely/dockly
+      name: swipely/dockly
+      status: stale
+      stars: 228
+      forks: 10
+      last_push: 2023-02-15T15:26:17Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/utensils/essex
+      name: utensils/essex
+      status: healthy
+      stars: 38
+      last_push: 2025-03-18T21:33:36Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/NVIDIA/hpc-container-maker
+      name: NVIDIA/hpc-container-maker
+      status: healthy
+      stars: 508
+      forks: 100
+      last_push: 2026-02-19T23:22:06Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/genuinetools/img
+      name: genuinetools/img
+      status: inactive
+      stars: 3990
+      forks: 234
+      last_push: 2024-05-19T22:07:07Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/duedil-ltd/portainer
+      name: duedil-ltd/portainer
+      status: stale
+      stars: 134
+      forks: 16
+      last_push: 2017-02-28T17:15:49Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/cybersecsi/RAUDI
+      name: cybersecsi/RAUDI
+      status: healthy
+      stars: 560
+      forks: 34
+      last_push: 2026-02-26T09:33:46Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lavie/runlike
+      name: lavie/runlike
+      status: healthy
+      stars: 2916
+      forks: 162
+      last_push: 2025-12-04T12:36:39Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/theAkito/userdef
+      name: theAkito/userdef
+      status: stale
+      stars: 11
+      last_push: 2023-10-14T20:34:12Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/P3GLEG/Whaler
+      name: P3GLEG/Whaler
+      status: healthy
+      stars: 1185
+      forks: 101
+      last_push: 2025-09-17T03:56:52Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Gueils/whales
+      name: Gueils/whales
+      status: stale
+      stars: 391
+      forks: 20
+      last_push: 2019-05-27T13:20:14Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/garywiz/chaperone-docker
+      name: garywiz/chaperone-docker
+      status: stale
+      stars: 66
+      forks: 11
+      last_push: 2018-10-05T07:48:36Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/patrickhoefler/dockerfilegraph
+      name: patrickhoefler/dockerfilegraph
+      status: healthy
+      stars: 255
+      forks: 17
+      last_push: 2026-02-26T05:40:58Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Dockershelf/dockershelf
+      name: Dockershelf/dockershelf
+      status: healthy
+      stars: 97
+      forks: 13
+      last_push: 2026-01-22T01:03:39Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/deckrun/dockadvisor
+      name: deckrun/dockadvisor
+      status: healthy
+      stars: 178
+      forks: 6
+      last_push: 2026-01-12T09:26:02Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/wemake-services/docker-image-size-limit
+      name: wemake-services/docker-image-size-limit
+      status: healthy
+      stars: 130
+      forks: 5
+      last_push: 2026-02-27T11:53:07Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/buddy-works/dockerfile-linter
+      name: buddy-works/dockerfile-linter
+      status: stale
+      stars: 46
+      forks: 3
+      last_push: 2023-03-04T05:06:08Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/replicatedhq/dockerfilelint
+      name: replicatedhq/dockerfilelint
+      status: stale
+      stars: 1031
+      forks: 83
+      last_push: 2023-09-27T20:58:01Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hadolint/hadolint
+      name: hadolint/hadolint
+      status: healthy
+      stars: 11966
+      forks: 487
+      last_push: 2026-01-27T13:27:01Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/RedCoolBeans/cargos-buildroot
+      name: RedCoolBeans/cargos-buildroot
+      status: stale
+      stars: 11
+      forks: 2
+      last_push: 2017-04-02T14:59:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hcguersoy/cleanreg
+      name: hcguersoy/cleanreg
+      status: stale
+      stars: 59
+      forks: 18
+      last_push: 2022-09-03T17:43:40Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/netvarun/docket
+      name: netvarun/docket
+      status: stale
+      stars: 709
+      forks: 33
+      last_push: 2020-09-02T02:35:17Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dragonflyoss/Dragonfly2
+      name: dragonflyoss/Dragonfly2
+      status: healthy
+      stars: 3049
+      forks: 373
+      last_push: 2026-02-25T02:37:31Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/uber/kraken
+      name: uber/kraken
+      status: healthy
+      stars: 6653
+      forks: 468
+      last_push: 2026-02-25T13:57:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jhstatewide/nscr
+      name: jhstatewide/nscr
+      status: healthy
+      stars: 1
+      last_push: 2025-10-27T14:37:18Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/inmagik/registryo
+      name: inmagik/registryo
+      status: healthy
+      stars: 15
+      last_push: 2025-12-17T10:20:47Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/noteed/rescoyl
+      name: noteed/rescoyl
+      status: stale
+      stars: 18
+      forks: 4
+      last_push: 2017-04-08T19:17:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/instacart/ahab
+      name: instacart/ahab
+      status: stale
+      stars: 137
+      forks: 7
+      last_push: 2018-11-16T21:54:44Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lispyclouds/contajners
+      name: lispyclouds/contajners
+      status: healthy
+      stars: 145
+      forks: 8
+      last_push: 2026-02-20T09:07:36Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/gesellix/docker-client
+      name: gesellix/docker-client
+      status: healthy
+      stars: 119
+      forks: 28
+      last_push: 2026-02-27T16:52:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dgongut/docker-controller-bot
+      name: dgongut/docker-controller-bot
+      status: healthy
+      stars: 240
+      forks: 31
+      last_push: 2026-02-04T15:58:07Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/whisklabs/docker-it-scala
+      name: whisklabs/docker-it-scala
+      status: stale
+      stars: 433
+      forks: 90
+      last_push: 2024-02-14T12:56:54Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/amihaiemil/docker-java-api
+      name: amihaiemil/docker-java-api
+      status: stale
+      stars: 274
+      forks: 55
+      last_push: 2021-06-04T01:21:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/fabric8io/docker-maven-plugin
+      name: fabric8io/docker-maven-plugin
+      status: healthy
+      stars: 1928
+      forks: 656
+      last_push: 2026-02-24T15:30:08Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Microsoft/Docker.DotNet
+      name: Microsoft/Docker.DotNet
+      status: healthy
+      stars: 2403
+      forks: 407
+      last_push: 2025-08-28T14:08:51Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ChangemakerStudios/Docker.Registry.DotNet
+      name: ChangemakerStudios/Docker.Registry.DotNet
+      status: healthy
+      stars: 42
+      forks: 21
+      last_push: 2025-10-06T03:43:52Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/apocas/dockerode
+      name: apocas/dockerode
+      status: healthy
+      stars: 4827
+      forks: 486
+      last_push: 2026-01-09T08:49:53Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/eon01/DoMonit
+      name: eon01/DoMonit
+      status: stale
+      stars: 76
+      forks: 15
+      last_push: 2021-06-01T21:57:21Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/fsouza/go-dockerclient
+      name: fsouza/go-dockerclient
+      status: healthy
+      stars: 2236
+      forks: 555
+      last_push: 2026-02-26T03:52:11Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/gesellix/gradle-docker-plugin
+      name: gesellix/gradle-docker-plugin
+      status: healthy
+      stars: 81
+      forks: 17
+      last_push: 2026-02-27T14:32:37Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/greenled/portainer-stack-utils
+      name: greenled/portainer-stack-utils
+      status: healthy
+      stars: 74
+      forks: 16
+      last_push: 2025-12-05T02:34:50Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/marcuslonnberg/sbt-docker
+      name: marcuslonnberg/sbt-docker
+      status: inactive
+      stars: 733
+      forks: 112
+      last_push: 2024-12-12T15:18:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/harbur/captain
+      name: harbur/captain
+      status: healthy
+      stars: 776
+      forks: 48
+      last_push: 2025-05-25T00:09:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/caicloud/cyclone
+      name: caicloud/cyclone
+      status: stale
+      stars: 1074
+      forks: 171
+      last_push: 2023-10-24T12:08:27Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/DefangLabs/defang
+      name: DefangLabs/defang
+      status: healthy
+      stars: 146
+      forks: 24
+      last_push: 2026-02-27T19:16:01Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/crazy-max/diun
+      name: crazy-max/diun
+      status: healthy
+      stars: 4428
+      forks: 144
+      last_push: 2026-02-27T07:02:29Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/mag37/dockcheck
+      name: mag37/dockcheck
+      status: healthy
+      stars: 2221
+      forks: 77
+      last_push: 2026-02-06T17:07:58Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/jenkinsci/docker-plugin
+      name: jenkinsci/docker-plugin
+      status: healthy
+      stars: 498
+      forks: 325
+      last_push: 2026-01-16T13:00:38Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/drone/drone
+      name: drone/drone
+      status: healthy
+      stars: 33826
+      forks: 2894
+      last_push: 2026-02-27T08:17:22Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/CodesWhat/drydock
+      name: CodesWhat/drydock
+      status: healthy
+      stars: 93
+      forks: 4
+      last_push: 2026-02-24T04:20:32Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/shizunge/gantry
+      name: shizunge/gantry
+      status: healthy
+      stars: 86
+      forks: 4
+      last_push: 2026-02-24T05:29:27Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/theSage21/jaypore_ci
+      name: theSage21/jaypore_ci
+      status: stale
+      stars: 38
+      forks: 4
+      last_push: 2023-06-03T17:03:43Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Kraken-CI/kraken
+      name: Kraken-CI/kraken
+      status: healthy
+      stars: 160
+      forks: 20
+      last_push: 2026-01-15T13:00:32Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/francescou/docker-continuous-deployment
+      name: francescou/docker-continuous-deployment
+      status: stale
+      stars: 145
+      forks: 38
+      last_push: 2017-08-01T17:25:15Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/stelligent/mu
+      name: stelligent/mu
+      status: stale
+      stars: 965
+      forks: 133
+      last_push: 2020-06-18T14:09:29Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/systemslab/popper
+      name: systemslab/popper
+      status: stale
+      stars: 307
+      forks: 62
+      last_push: 2022-03-29T22:02:27Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Stratoscale/skipper
+      name: Stratoscale/skipper
+      status: healthy
+      stars: 50
+      forks: 22
+      last_push: 2025-05-13T13:33:39Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ghostsquad/swarmci
+      name: ghostsquad/swarmci
+      status: stale
+      stars: 58
+      forks: 6
+      last_push: 2017-02-24T02:14:18Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/binci/binci
+      name: binci/binci
+      status: stale
+      stars: 673
+      forks: 24
+      last_push: 2022-12-06T20:24:40Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/coder/coder
+      name: coder/coder
+      status: healthy
+      stars: 12338
+      forks: 1177
+      last_push: 2026-02-27T23:34:35Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lstephen/construi
+      name: lstephen/construi
+      status: stale
+      stars: 24
+      forks: 5
+      last_push: 2022-12-08T06:36:04Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/whatwedo/dde
+      name: whatwedo/dde
+      status: healthy
+      stars: 46
+      forks: 9
+      last_push: 2026-02-20T12:25:04Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/bibendi/dip
+      name: bibendi/dip
+      status: inactive
+      stars: 1322
+      forks: 50
+      last_push: 2024-12-25T09:38:57Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/dnephin/dobi
+      name: dnephin/dobi
+      status: stale
+      stars: 315
+      forks: 34
+      last_push: 2023-11-10T06:32:19Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/nandoquintana/docker-missing-tools
+      name: nandoquintana/docker-missing-tools
+      status: stale
+      stars: 30
+      forks: 6
+      last_push: 2018-05-01T13:10:10Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Ph3nol/Docker-Arch
+      name: Ph3nol/Docker-Arch
+      status: stale
+      stars: 31
+      forks: 2
+      last_push: 2018-09-24T06:43:08Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/EugenMayer/docker-sync
+      name: EugenMayer/docker-sync
+      status: healthy
+      stars: 3565
+      forks: 285
+      last_push: 2025-11-30T20:06:16Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/shyiko/docker-vm
+      name: shyiko/docker-vm
+      status: stale
+      stars: 43
+      forks: 8
+      last_push: 2016-09-24T17:45:47Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/matifali/dockerdl
+      name: matifali/dockerdl
+      status: healthy
+      stars: 86
+      forks: 11
+      last_push: 2025-12-29T19:27:19Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/eclipse/che
+      name: eclipse/che
+      status: healthy
+      stars: 7128
+      forks: 1199
+      last_push: 2026-02-27T12:40:18Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/EnvCLI/EnvCLI
+      name: EnvCLI/EnvCLI
+      status: healthy
+      stars: 116
+      forks: 4
+      last_push: 2025-06-16T20:36:16Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hpsaturn/esp32s3-linux
+      name: hpsaturn/esp32s3-linux
+      status: healthy
+      stars: 78
+      forks: 9
+      last_push: 2025-04-05T08:38:16Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/moshebe/gebug
+      name: moshebe/gebug
+      status: healthy
+      stars: 634
+      forks: 17
+      last_push: 2026-02-27T21:45:21Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/senges/kitt
+      name: senges/kitt
+      status: stale
+      stars: 20
+      forks: 1
+      last_push: 2023-02-23T14:01:05Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lando/lando
+      name: lando/lando
+      status: healthy
+      stars: 4220
+      forks: 530
+      last_push: 2026-02-24T21:10:02Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Peco602/rust-universal-compiler
+      name: Peco602/rust-universal-compiler
+      status: stale
+      stars: 33
+      forks: 2
+      last_push: 2023-04-30T17:04:02Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/uniget-org/cli
+      name: uniget-org/cli
+      status: healthy
+      stars: 20
+      last_push: 2026-02-12T08:35:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/tailhook/vagga
+      name: tailhook/vagga
+      status: stale
+      stars: 1895
+      forks: 96
+      last_push: 2023-03-31T06:13:55Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/deluan/zsh-in-docker
+      name: deluan/zsh-in-docker
+      status: inactive
+      stars: 1094
+      forks: 119
+      last_push: 2024-09-30T19:07:49Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/tjamet/caduc
+      name: tjamet/caduc
+      status: stale
+      stars: 21
+      forks: 1
+      last_push: 2019-01-07T16:07:50Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ZZROTDesign/docker-clean
+      name: ZZROTDesign/docker-clean
+      status: stale
+      stars: 1304
+      forks: 90
+      last_push: 2018-01-16T16:29:41Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Yelp/docker-custodian
+      name: Yelp/docker-custodian
+      status: inactive
+      stars: 374
+      forks: 49
+      last_push: 2024-08-14T08:08:10Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/pdacity/docker_gc
+      name: pdacity/docker_gc
+      status: stale
+      stars: 127
+      forks: 22
+      last_push: 2024-02-09T17:50:47Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/stepchowfun/docuum
+      name: stepchowfun/docuum
+      status: healthy
+      stars: 683
+      forks: 42
+      last_push: 2025-12-12T02:03:33Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/apache/openwhisk
+      name: apache/openwhisk
+      status: healthy
+      stars: 6756
+      forks: 1173
+      last_push: 2026-01-24T05:17:06Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/bfirsh/funker-example-voting-app
+      name: bfirsh/funker-example-voting-app
+      status: stale
+      stars: 26
+      forks: 8
+      last_push: 2016-11-29T11:51:39Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/iron-io/functions
+      name: iron-io/functions
+      status: stale
+      stars: 3220
+      forks: 224
+      last_push: 2023-09-15T01:37:58Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/openfaas/faas
+      name: openfaas/faas
+      status: healthy
+      stars: 26102
+      forks: 1970
+      last_push: 2026-02-22T08:49:51Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/grycap/scar
+      name: grycap/scar
+      status: stale
+      stars: 600
+      forks: 47
+      last_push: 2023-05-22T11:01:11Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/GoogleContainerTools/container-structure-test
+      name: GoogleContainerTools/container-structure-test
+      status: healthy
+      stars: 2460
+      forks: 207
+      last_push: 2026-02-20T23:41:16Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/zuazo/dockerspec
+      name: zuazo/dockerspec
+      status: stale
+      stars: 181
+      forks: 8
+      last_push: 2017-08-30T20:40:57Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/lynchborg/ezdc
+      name: lynchborg/ezdc
+      status: stale
+      stars: 12
+      last_push: 2024-02-12T08:42:24Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/kurtosis-tech/kurtosis
+      name: kurtosis-tech/kurtosis
+      status: healthy
+      stars: 523
+      forks: 88
+      last_push: 2026-02-27T07:48:41Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/alexei-led/pumba
+      name: alexei-led/pumba
+      status: healthy
+      stars: 2980
+      forks: 201
+      last_push: 2026-02-27T19:58:45Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/docker-exec/dexec
+      name: docker-exec/dexec
+      status: stale
+      stars: 332
+      forks: 14
+      last_push: 2021-05-13T06:04:19Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/benzaita/dockerized-cli
+      name: benzaita/dockerized-cli
+      status: stale
+      stars: 65
+      forks: 5
+      last_push: 2024-02-27T13:49:38Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/CenturyLinkLabs/dray
+      name: CenturyLinkLabs/dray
+      status: stale
+      stars: 386
+      forks: 37
+      last_push: 2020-01-24T17:34:58Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/artsy/hokusai
+      name: artsy/hokusai
+      status: healthy
+      stars: 98
+      forks: 25
+      last_push: 2026-02-06T19:41:17Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/livecycle/preevy
+      name: livecycle/preevy
+      status: healthy
+      stars: 2189
+      forks: 87
+      last_push: 2026-02-06T07:38:46Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ianmiell/shutit
+      name: ianmiell/shutit
+      status: stale
+      stars: 2145
+      forks: 110
+      last_push: 2022-08-14T14:43:18Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/subuser-security/subuser
+      name: subuser-security/subuser
+      status: inactive
+      stars: 894
+      forks: 63
+      last_push: 2025-02-23T11:31:31Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/christippett/terraform-cloudinit-container-server
+      name: christippett/terraform-cloudinit-container-server
+      status: stale
+      stars: 120
+      forks: 30
+      last_push: 2022-08-19T06:41:50Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/ramitsurana/turbo
+      name: ramitsurana/turbo
+      status: stale
+      stars: 27
+      forks: 12
+      last_push: 2021-12-22T19:03:53Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/indigo-dc/udocker
+      name: indigo-dc/udocker
+      status: healthy
+      stars: 1703
+      forks: 164
+      last_push: 2025-08-13T17:21:57Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/Appdynamics/docker-monitoring-extension
+      name: Appdynamics/docker-monitoring-extension
+      status: inactive
+      stars: 5
+      forks: 6
+      last_push: 2024-10-02T10:48:59Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/sematext/sematext-agent-docker
+      name: sematext/sematext-agent-docker
+      status: stale
+      stars: 208
+      forks: 32
+      last_push: 2023-12-09T18:07:20Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/cicdops/awesome-ciandcd
+      name: cicdops/awesome-ciandcd
+      status: inactive
+      stars: 1985
+      forks: 224
+      last_push: 2024-04-01T18:08:23Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/docker/awesome-compose
+      name: docker/awesome-compose
+      status: healthy
+      stars: 44126
+      forks: 8054
+      last_push: 2026-02-27T05:54:59Z
+      checked_at: 2026-02-27T23:43:36.588325Z
+    - url: https://github.com/hexops/dockerfile
+      name: hexops/dockerfile
+      status: stale
+      stars: 4092
+      forks: 155
+      last_push: 2021-08-08T04:42:37Z
+      checked_at: 2026-02-27T23:43:36.588325Z

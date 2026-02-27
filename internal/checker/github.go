@@ -27,21 +27,35 @@ type RepoInfo struct {
 
 // ExtractGitHubRepo extracts owner/name from a GitHub URL.
 // Returns false for non-repo URLs (issues, wiki, apps, etc.).
-func ExtractGitHubRepo(url string) (owner, name string, ok bool) {
-	if !strings.HasPrefix(url, "https://github.com/") {
+func ExtractGitHubRepo(rawURL string) (owner, name string, ok bool) {
+	u, err := url.Parse(rawURL)
+	if err != nil {
 		return "", "", false
 	}
-	path := strings.TrimPrefix(url, "https://github.com/")
-	path = strings.TrimRight(path, "/")
+
+	host := strings.ToLower(u.Hostname())
+	if host != "github.com" && host != "www.github.com" {
+		return "", "", false
+	}
+
+	path := strings.Trim(u.Path, "/")
 	parts := strings.Split(path, "/")
 	if len(parts) != 2 || parts[0] == "" || parts[1] == "" {
 		return "", "", false
 	}
-	// Skip non-repo paths
-	if parts[0] == "apps" || parts[0] == "features" || parts[0] == "topics" {
+
+	// Skip known non-repository top-level routes.
+	switch parts[0] {
+	case "apps", "features", "topics":
 		return "", "", false
 	}
-	return parts[0], parts[1], true
+
+	name = strings.TrimSuffix(parts[1], ".git")
+	if name == "" {
+		return "", "", false
+	}
+
+	return parts[0], name, true
 }
 
 func isHTTPURL(raw string) bool {
@@ -50,6 +64,16 @@ func isHTTPURL(raw string) bool {
 		return false
 	}
 	return u.Scheme == "http" || u.Scheme == "https"
+}
+
+func isGitHubAuthError(err error) bool {
+	if err == nil {
+		return false
+	}
+	s := strings.ToLower(err.Error())
+	return strings.Contains(s, "401 unauthorized") ||
+		strings.Contains(s, "bad credentials") ||
+		strings.Contains(s, "resource not accessible by integration")
 }
 
 // PartitionLinks separates URLs into GitHub repos and external HTTP(S) links.
@@ -134,6 +158,9 @@ func (gc *GitHubChecker) CheckRepos(ctx context.Context, urls []string, batchSiz
 		info, err := gc.CheckRepo(ctx, owner, name)
 		if err != nil {
 			errs = append(errs, err)
+			if isGitHubAuthError(err) {
+				break
+			}
 			continue
 		}
 		results = append(results, info)
