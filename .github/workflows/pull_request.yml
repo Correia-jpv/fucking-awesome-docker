@@ -11,22 +11,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # ratchet:actions/checkout@v6.0.2
-      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # ratchet:actions/setup-node@v6.2.0
-        with:
-          node-version: lts/*
+      - uses: actions/checkout@v4
 
-      - uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # ratchet:actions/cache@v5.0.3
-        id: cache
+      - uses: actions/setup-go@v5
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          go-version: "1.22"
 
-      - name: Install Dependencies
-        # if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
-      - run: npm run test-pr
+      - name: Build
+        run: go build -o awesome-docker ./cmd/awesome-docker
+
+      - name: Validate
+        run: ./awesome-docker validate
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
