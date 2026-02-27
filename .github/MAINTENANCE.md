@@ -1,125 +1,81 @@
-# 🔧 Maintenance Guide for Awesome Docker
+# Maintenance Guide
 
-This guide helps maintainers keep the awesome-docker list up-to-date and high-quality.
+This guide describes how maintainers keep the list and automation healthy.
 
-## 🤖 Automated Systems
+## Automated Workflows
 
-### Weekly Health Reports
-- **What**: Checks all GitHub repositories for activity, archived status, and maintenance
-- **When**: Every Monday at 9 AM UTC
-- **Where**: Creates/updates a GitHub issue with label `health-report`
-- **Action**: Review the report and mark abandoned projects with `:skull:`
+### Pull Requests / Weekly QA (`pull_request.yml`)
 
-### Broken Links Detection  
-- **What**: Tests all links in README.md for availability
-- **When**: Every Saturday at 2 AM UTC + on every PR
-- **Where**: Creates/updates a GitHub issue with label `broken-links`
-- **Action**: Fix or remove broken links, or add to exclusion list
+- Runs on pull requests and weekly on Saturday.
+- Builds the Go CLI and runs `./awesome-docker validate`.
 
-### PR Validation
-- **What**: Checks for duplicate links and basic validation
-- **When**: On every pull request
-- **Action**: Automated - contributors see results immediately
+### Broken Links Report (`broken_links.yml`)
 
-## 📋 Manual Maintenance Tasks
+- Runs weekly on Saturday and on manual trigger.
+- Executes `./awesome-docker check`.
+- Opens/updates a `broken-links` issue when problems are found.
 
-### Monthly Review (First Monday of the month)
-1. Check health report issue for archived/stale projects
-2. Mark archived projects with `:skull:` in README.md
-3. Review projects with 2+ years of inactivity
-4. Remove projects that are truly abandoned/broken
+### Weekly Health Report (`health_report.yml`)
 
-### Quarterly Deep Dive (Every 3 months)
-1. Run: `./awesome-docker health` then `./awesome-docker report` for detailed report
-2. Review project categories - are they still relevant?
-3. Check for popular new Docker tools to add
-4. Update documentation links if newer versions exist
+- Runs weekly on Monday and on manual trigger.
+- Executes `./awesome-docker health` then `./awesome-docker report`.
+- Opens/updates a `health-report` issue.
 
-### Annual Cleanup (January)
-1. Remove all `:skull:` projects older than 1 year
-2. Review CONTRIBUTING.md guidelines
-3. Update year references in documentation
+### Deploy to GitHub Pages (`deploy-pages.yml`)
 
-## 🛠️ Maintenance Commands
+- Runs on pushes to `master` and manual trigger.
+- Builds website with `./awesome-docker build` and publishes `website/`.
+
+## Day-to-Day Commands
 
 ```bash
-# Build the CLI
-go build -o awesome-docker ./cmd/awesome-docker
+# Build CLI
+make build
 
-# Lint README formatting (add --fix to auto-fix)
-./awesome-docker lint
+# README lint/validation
+make lint
+
+# Auto-fix formatting issues
 ./awesome-docker lint --fix
 
-# Check all links (requires GITHUB_TOKEN for GitHub repos)
-./awesome-docker check
-
-# PR validation (lint + external link check)
-./awesome-docker validate
-
-# Score repository health (requires GITHUB_TOKEN)
-./awesome-docker health
-
-# Generate health report from cache
-./awesome-docker report
-
-# Build the website
-./awesome-docker build
-
-# Run tests
-go test ./...
+# Link checks and health checks (requires GITHUB_TOKEN)
+make check
+make health
+make report
 ```
 
-## 📊 Quality Standards
+## Content Maintenance Policy
 
-### Adding New Projects
-- Must have clear documentation (README with install/usage)
-- Should have activity within last 18 months
-- GitHub project preferred over website links
-- Must be Docker/container-related
+- Remove archived/deprecated projects instead of tagging them.
+- Remove broken links that cannot be fixed.
+- Keep sections alphabetically sorted.
+- Keep descriptions short and actionable.
 
-### Marking Projects as Abandoned
-Use `:skull:` emoji when:
-- Repository is archived on GitHub
-- No commits for 2+ years
-- Project explicitly states it's deprecated
-- Maintainer confirms abandonment
+## Suggested Review Cadence
 
-### Removing Projects
-Only remove (don't just mark `:skull:`):
-- Broken/404 links that can't be fixed
-- Duplicate entries
-- Spam or malicious projects
-- Projects that never met quality standards
+### Weekly
 
-## 🚨 Emergency Procedures
+- Triage open `broken-links` and `health-report` issues.
+- Merge straightforward quality PRs.
 
-### Critical Broken Links
-If important resources are down:
-1. Check if they moved (update URL)
-2. Search for alternatives
-3. Check Internet Archive for mirrors
-4. Temporarily comment out until resolved
+### Monthly
 
-### Spam Pull Requests
-1. Close immediately
-2. Mark as spam
-3. Block user if repeated offense
-4. Don't engage in comments
+- Review sections for stale/duplicate entries.
+- Re-run `check` and `health` manually if needed.
 
-## 📈 Metrics to Track
+### Quarterly
 
-- Total projects: ~731 GitHub repos
-- Health status: aim for <5% archived
-- Link availability: aim for >98% working
-- PR merge time: aim for <7 days
-- Weekly contributor engagement
+- Review `.github` docs and templates for drift.
+- Confirm workflows still match repository tooling and policies.
 
-## 🤝 Getting Help
+## Contributor Support
 
-- Open a discussion in GitHub Discussions
-- Check AGENTS.md for AI assistant guidelines
-- Review CONTRIBUTING.md for contributor info
+When requesting PR changes, be explicit and actionable:
+
+- point to section/order problems,
+- explain why a link should be removed,
+- suggest exact wording when description quality is the issue.
 
 ---
 
-*Last updated: 2025-10-01*
+Last updated: 2026-02-27
