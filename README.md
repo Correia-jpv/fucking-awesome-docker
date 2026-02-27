@@ -151,7 +151,7 @@ _Source:_ [What is Docker](https://www.docker.com/why-docker/)
 - [Capitan](https://github.com/byrnedo/capitan) - Composable docker orchestration with added scripting support by [byrnedo].
 - [Composerize](https://github.com/magicmark/composerize) - Convert docker run commands into docker-compose files.
 - [crowdr](https://github.com/polonskiy/crowdr) - Tool for managing multiple Docker containers (`docker-compose` alternative).
-- [ctk](https://github.com/ctk-hq/ctk) - :construction: Visual composer for container based workloads. By [corpulent](https://github.com/corpulent).
+- [ctk](https://github.com/ctk-hq/ctk) - Visual composer for container based workloads. By [corpulent](https://github.com/corpulent).
 - [docker-config-update](https://github.com/sudo-bmitch/docker-config-update) - Utility to update docker configs and secrets for deploying in a compose file.
 - [elsy](https://github.com/cisco/elsy) - An opinionated, multi-language, build tool based on Docker and Docker Compose.
 - [habitus](https://github.com/cloud66-oss/habitus) - A Build Flow Tool for Docker.
@@ -201,7 +201,6 @@ _Source:_ [What is Docker](https://www.docker.com/why-docker/)
 - [NexClipper](https://github.com/NexClipper/NexClipper) - NexClipper is the container monitoring and performance management solution specialized in Docker, Apache Mesos, Marathon, DC/OS, Mesosphere, Kubernetes.
 - [Out-of-the-box Host/Container Monitoring/Logging/Alerting Stack](https://github.com/uschtwill/docker_monitoring_logging_alerting) - Docker host and container monitoring, logging and alerting out of the box using cAdvisor, Prometheus, Grafana for monitoring, Elasticsearch, Kibana and Logstash for logging and elastalert and Alertmanager for alerting. Set up in 5 Minutes. Secure mode for production use with built-in [Automated Nginx Reverse Proxy (jwilder's)][nginxproxy].
 - [Sidekick](https://github.com/runsidekick/sidekick) - Open source live application debugger like Chrome DevTools for your backend. Collect traces and generate logs on-demand without stopping & redeploying your applications.
-- [SuperVisor CPM](https://t0xic0der.medium.com/simply-accessible-container-performance-monitoring-with-supervisor-7fb47f925f3b) - :construction: A simple and accessible FOSS container performance monitoring service written in Python.
 - [SwarmAlert](https://github.com/gpulido/SwarmAlert) - Monitors a Docker Swarm and sends Pushover alerts when it finds a container with no healthy service task running.
 - [Zabbix Docker](https://github.com/gomex/docker-zabbix) - Monitor containers automatically using zabbix LLD feature.
 - [Zabbix Docker module](https://github.com/monitoringartist/Zabbix-Docker-Monitoring) - Zabbix module that provides discovery of running containers, CPU/memory/blk IO/net container metrics. Systemd Docker and LXC execution driver is also supported. It's a dynamically linked shared object library, so its performance is (~10x) better, than any script solution.
@@ -403,7 +402,6 @@ Native desktop applications for managing and monitoring docker hosts and cluster
 - [Swirl](https://github.com/cuigh/swirl) - Swirl is a web management tool for Docker, focused on swarm cluster By [cuigh](https://github.com/cuigh/).
 - [Theia](https://github.com/eclipse-theia/theia) - Extensible platform to develop full-fledged multi-language Cloud & Desktop IDE-like products with state-of-the-art web technologies.
 - [usulnet](https://github.com/fr4nsys/usulnet) - A complete and modern Docker management platform designed for sysadmin, devops with enterprise grade tools, cve scanner, ssh, rdp on web and much more. By [fr4nsys](https://github.com/fr4nsys).
-- [Yacht](https://github.com/SelfhostedPro/Yacht) - :construction: A Web UI for docker that focuses on templates and ease of use in order to make deployments as easy as possible. By [SelfhostedPro](https://github.com/SelfhostedPro).
 
 ## Docker Images
 
@@ -486,7 +484,6 @@ Examples by:
 - [Dockadvisor](https://github.com/deckrun/dockadvisor) - Lightweight Dockerfile linter with 60+ rules, quality scoring, and security checks.
 - [docker-image-size-limit](https://github.com/wemake-services/docker-image-size-limit) - A tool to keep an eye on your docker images size.
 - [Dockerfile Linter action](https://github.com/buddy-works/dockerfile-linter) - The linter lets you verify Dockerfile syntax to make sure it follows the best practices for building efficient Docker images.
-- [dockfmt](https://github.com/jessfraz/dockfmt) - :construction: Dockerfile formatter and parser.
 - [FROM:latest](https://github.com/replicatedhq/dockerfilelint) - An opinionated Dockerfile linter.
 - [Hadolint](https://github.com/hadolint/hadolint) - A Dockerfile linter that checks for best practices, common mistakes, and is also able to lint any bash written in `RUN` instructions;.
 
@@ -542,7 +539,7 @@ Services to securely store your Docker images.
 - [DoMonit](https://github.com/eon01/DoMonit) - A simple Docker Monitoring wrapper For Docker API.
 - [go-dockerclient](https://github.com/fsouza/go-dockerclient/) - Go HTTP client for the Docker remote API.
 - [Gradle Docker plugin](https://github.com/gesellix/gradle-docker-plugin) - A Docker remote api plugin for Gradle.
-- [Portainer stack utils](https://github.com/greenled/portainer-stack-utils) - :construction: Bash script to deploy/update/undeploy Docker stacks in a Portainer instance from a docker-compose yaml file. By [greenled](https://github.com/greenled).
+- [Portainer stack utils](https://github.com/greenled/portainer-stack-utils) - Bash script to deploy/update/undeploy Docker stacks in a Portainer instance from a docker-compose yaml file. By [greenled](https://github.com/greenled).
 - [sbt-docker](https://github.com/marcuslonnberg/sbt-docker) - Create Docker images directly from sbt.
 
 ### CI/CD
@@ -574,7 +571,7 @@ Services to securely store your Docker images.
 - [Binci](https://github.com/binci/binci) - Containerize your development workflow. (formerly DevLab by [TechnologyAdvice](https://github.com/TechnologyAdvice)).
 - [coder](https://github.com/coder/coder) - Remote development machines powered by Terraform or Docker.
 - [construi](https://github.com/lstephen/construi) - Run your builds inside a Docker defined environment.
-- [dde](https://github.com/whatwedo/dde) - :construction: Local development environment toolset based on Docker. By [whatwedo](https://github.com/whatwedo).
+- [dde](https://github.com/whatwedo/dde) - Local development environment toolset based on Docker. By [whatwedo](https://github.com/whatwedo).
 - [DIP](https://github.com/bibendi/dip) - CLI utility for straightforward provisioning and interacting with an application configured by docker-compose. By [bibendi](https://github.com/bibendi).
 - [dobi](https://github.com/dnephin/dobi) - A build automation tool for Docker applications. By [dnephin](https://github.com/dnephin).
 - [Docker Missing Tools](https://github.com/nandoquintana/docker-missing-tools) - A set of bash commands to shortcut typical docker dev-ops. An alternative to creating typical helper scripts like "build.sh" and "deploy.sh" inside code repositories. By [NandoQuintana](https://github.com/nandoquintana).
@@ -667,7 +664,6 @@ Services to securely store your Docker images.
 - [Broadcom Docker Monitoring](https://www.broadcom.com/info/aiops/docker-monitoring) - :heavy_dollar_sign: Agile Operations solutions from Broadcom deliver the modern Docker monitoring businesses need to accelerate and optimize the performance of microservices and the dynamic Docker environments running them. Monitor both the Docker environment and apps that run inside them. (former CA Technologies).
 -   [Collecting docker logs and stats with Splunk](https://www.splunk.com/en_us/blog/tips-and-tricks/collecting-docker-logs-and-stats-with-splunk.html)
 - [Datadog](https://www.datadoghq.com/) - :heavy_dollar_sign: Datadog is a full-stack monitoring service for large-scale cloud environments that aggregates metrics/events from servers, databases, and applications. It includes support for Docker, Kubernetes, and Mesos.
-- [DockStat](https://github.com/its4nik/dockstat) - :construction: A full fletched (WIP) Docker management solution featuring plugin support and community integration by [its4nik](https://github.com/its4nik).
 - [Prometheus](https://prometheus.io/) - :heavy_dollar_sign: Open-source service monitoring system and time series database.
 - [Site24x7](https://www.site24x7.com/docker-monitoring.html) - :heavy_dollar_sign: Docker Monitoring for DevOps and IT is a SaaS Pay per Host model.
 - [SPM for Docker](https://github.com/sematext/sematext-agent-docker) - :heavy_dollar_sign: Monitoring of host and container metrics, Docker events and logs. Automatic log parser. Anomaly Detection and alerting for metrics and logs. [sematext](https://github.com/sematext).
