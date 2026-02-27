@@ -180,7 +180,6 @@ _Source:_ [What is Docker](https://www.docker.com/why-docker/)
 ### Monitoring
 
 - [Autoheal](https://github.com/willfarrell/docker-autoheal) - Monitor and restart unhealthy docker containers automatically.
-- [Axibase Collector](https://axibase.com/docs/axibase-collector/) - Axibase Collector streams performance counters, configuration changes and lifecycle events from the Docker engine(s) into Axibase Time Series Database for roll-up dashboards and integration with upstream monitoring systems.
 - [cAdvisor](https://github.com/google/cadvisor) - Analyzes resource usage and performance characteristics of running containers.
 - [Checkmate](https://github.com/bluewave-labs/checkmate) - Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
 - [DLIA](https://github.com/zorak1103/dlia) - DLIA is an AI-powered Docker log monitoring agent that uses Large Language Models (LLMs) to intelligently analyze container logs, detect anomalies, and provide contextual insights over time. By [zorak1103](https://github.com/zorak1103).
@@ -190,7 +189,7 @@ _Source:_ [What is Docker](https://www.docker.com/why-docker/)
 - [dockprom](https://github.com/stefanprodan/dockprom) - Docker hosts and containers monitoring with Prometheus, Grafana, cAdvisor, NodeExporter and AlertManager.
 - [Doku](https://github.com/amerkurev/doku) - Doku is a simple web-based application that allows you to monitor Docker disk usage. [amerkurev](https://github.com/amerkurev).
 - [Dozzle](dozzle) - Monitor container logs in real-time with a browser or mobile device. [amir20](https://github.com/amir20).
-- [Dynatrace](https://www.dynatrace.com/solutions/container-monitoring/) - :heavy_dollar_sign: Monitor containerized applications without installing agents or modifying your Run commands.
+- [Dynatrace](https://docs.dynatrace.com/docs/observe/infrastructure-observability/container-platform-monitoring) - :heavy_dollar_sign: Monitor containerized applications without installing agents or modifying your Run commands.
 - [Glances](https://github.com/nicolargo/glances) - A cross-platform curses-based system monitoring tool written in Python.
 - [Grafana Docker Dashboard Template](https://grafana.com/grafana/dashboards/179-docker-prometheus-monitoring/) - A template for your Docker, Grafana and Prometheus stack [vegasbrianc][vegasbrianc].
 - [HertzBeat](https://github.com/dromara/hertzbeat) - An open-source real-time monitoring system with custom-monitor and agentless.
@@ -488,7 +487,7 @@ Examples by:
 
 ### Metadata
 
-- [opencontainer](https://github.com/opencontainers/image-spec/blob/master/annotations.md) - A convention and shared namespace for Docker labels defined by OCI Image Spec.
+- [opencontainer](https://github.com/opencontainers/image-spec/blob/main/annotations.md) - A convention and shared namespace for Docker labels defined by OCI Image Spec.
 
 ### Registry
 
@@ -609,7 +608,7 @@ Services to securely store your Docker images.
 ### Testing
 
 - [Container Structure Test](https://github.com/GoogleContainerTools/container-structure-test) - A framework to validate the structure of an image by checking the outputs of commands or the contents of the filesystem. By [GoogleContainerTools][googlecontainertools].
-- [dgoss](https://github.com/aelsabbahy/goss/tree/master/extras/dgoss) - A fast YAML based tool for validating docker containers.
+- [dgoss](https://github.com/goss-org/goss/tree/master/extras/dgoss) - A fast YAML based tool for validating docker containers.
 - [DockerSpec](https://github.com/zuazo/dockerspec) - A small Ruby Gem to run RSpec and Serverspec, Infrataster and Capybara tests against Dockerfiles or Docker images easily. By [zuazo](https://github.com/zuazo).
 - [EZDC](https://github.com/lynchborg/ezdc) - Golang test harness for easily setting up tests that rely on services in a docker-compose.yml. By [byrnedo].
 -   [InSpec][inspec] - InSpec is an open-source testing framework for infrastructure with a human- and machine-readable language for specifying compliance, security and policy requirements. By [chef](https://github.com/chef)
@@ -619,7 +618,7 @@ Services to securely store your Docker images.
 
 ### Wrappers
 
-- [Ansible](https://docs.ansible.com/ansible/latest/collections/community/general/docker_container_module.html) - Manage the life cycle of Docker containers. By RedHat.
+- [Ansible](https://docs.ansible.com/projects/ansible/latest/collections/community/general/docker_container_module.html) - Manage the life cycle of Docker containers. By RedHat.
 - [dexec](https://github.com/docker-exec/dexec) - Command line interface written in Go for running code with Docker Exec images.
 - [dockerized](https://github.com/benzaita/dockerized-cli) - Seamlessly execute commands in a container.
 - [Dray](https://github.com/CenturyLinkLabs/dray) - An engine for managing the execution of container-based workflows.
@@ -638,7 +637,7 @@ Services to securely store your Docker images.
 
 - [CircleCI](https://circleci.com/) - :heavy_dollar_sign: Push or pull Docker images from your build environment, or build and run containers right on CircleCI.
 - [CodeFresh](https://codefresh.io) - :heavy_dollar_sign: Everything you need to build, test, and share your Docker applications. Provides automated end to end testing.
-- [CodeShip](https://www.cloudbees.com/products/codeship) - :heavy_dollar_sign: Work with your established Docker workflows while automating your testing and deployment tasks with our hosted platform dedicated to speed and security.
+- [CodeShip](https://www.cloudbees.com/blog/how-to-run-codeship-parallel-test-pipelines-efficiently-for-optimal-ci-parallelization) - :heavy_dollar_sign: Work with your established Docker workflows while automating your testing and deployment tasks with our hosted platform dedicated to speed and security.
 - [ConcourseCI](https://concourse-ci.org) - :heavy_dollar_sign: A CI SaaS platform for developers and DevOps teams pipeline oriented.
 -   [Semaphore CI](https://semaphore.io/) :heavy_dollar_sign: — A high-performance cloud solution that makes it easy to build, test and ship your containers to production.
 - [TravisCI](https://www.travis-ci.com/) - :heavy_dollar_sign: A Free github projects continuous integration Saas platform for developers and Devops.
@@ -650,11 +649,10 @@ Services to securely store your Docker images.
 - [Azure AKS](https://azure.microsoft.com/en-us/products/kubernetes-service/) - :heavy_dollar_sign: Simplify Kubernetes management, deployment, and operations. Use a fully managed Kubernetes container orchestration service.
 - [Cloud 66](https://www.cloud66.com) - :heavy_dollar_sign: Full-stack hosted container management as a service.
 - [Giant Swarm](https://www.giantswarm.io/) - :heavy_dollar_sign: Simple microservice infrastructure. Deploy your containers in seconds.
-- [Google Container Engine](https://cloud.google.com/kubernetes-engine/docs/) - :heavy_dollar_sign: Docker containers on Google Cloud Computing powered by [Kubernetes][kubernetes].
+- [Google Container Engine](https://docs.cloud.google.com/kubernetes-engine/docs) - :heavy_dollar_sign: Docker containers on Google Cloud Computing powered by [Kubernetes][kubernetes].
 - [Mesosphere DC/OS Platform](https://d2iq.com/products/dcos) - :heavy_dollar_sign: Integrated platform for data and containers built on Apache Mesos.
 - [Red Hat OpenShift Dedicated](https://www.redhat.com/en/technologies/cloud-computing/openshift/dedicated) - :heavy_dollar_sign: Fully-managed Red Hat® OpenShift® service on Amazon Web Services and Google Cloud.
 - [Triton](https://www.joyent.com/) - :heavy_dollar_sign: Elastic container-native infrastructure by Joyent.
-- [Virtuozzo Application Platform](https://www.virtuozzo.com/application-platform-partners/) - :heavy_dollar_sign: Deploy and manage your projects with turnkey PaaS across a wide network of reliable service providers.
 
 ### Monitoring Services
 
