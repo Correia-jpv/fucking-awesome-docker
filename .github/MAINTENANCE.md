@@ -30,7 +30,7 @@ This guide helps maintainers keep the awesome-docker list up-to-date and high-qu
 4. Remove projects that are truly abandoned/broken
 
 ### Quarterly Deep Dive (Every 3 months)
-1. Run: `npm run health-check` for detailed report
+1. Run: `./awesome-docker health` then `./awesome-docker report` for detailed report
 2. Review project categories - are they still relevant?
 3. Check for popular new Docker tools to add
 4. Update documentation links if newer versions exist
@@ -39,25 +39,34 @@ This guide helps maintainers keep the awesome-docker list up-to-date and high-qu
 1. Remove all `:skull:` projects older than 1 year
 2. Review CONTRIBUTING.md guidelines
 3. Update year references in documentation
-4. Check Node.js version requirements
 
 ## 🛠️ Maintenance Commands
 
 ```bash
-# Test all links (requires GITHUB_TOKEN)
-npm test
+# Build the CLI
+go build -o awesome-docker ./cmd/awesome-docker
 
-# Test PR changes only
-npm run test-pr
+# Lint README formatting (add --fix to auto-fix)
+./awesome-docker lint
+./awesome-docker lint --fix
 
-# Generate health report (requires GITHUB_TOKEN)
-npm run health-check
+# Check all links (requires GITHUB_TOKEN for GitHub repos)
+./awesome-docker check
+
+# PR validation (lint + external link check)
+./awesome-docker validate
+
+# Score repository health (requires GITHUB_TOKEN)
+./awesome-docker health
+
+# Generate health report from cache
+./awesome-docker report
 
 # Build the website
-npm run build
+./awesome-docker build
 
-# Update dependencies
-npm update
+# Run tests
+go test ./...
 ```
 
 ## 📊 Quality Standards
