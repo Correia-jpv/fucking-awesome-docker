@@ -204,7 +204,10 @@ func healthCmd() *cobra.Command {
 			scored := scorer.ScoreAll(infos)
 			cacheEntries := scorer.ToCacheEntries(scored)
 
-			hc, _ := cache.LoadHealthCache(healthCachePath)
+			hc, err := cache.LoadHealthCache(healthCachePath)
+			if err != nil {
+				return fmt.Errorf("load cache: %w", err)
+			}
 			hc.Merge(cacheEntries)
 			if err := cache.SaveHealthCache(healthCachePath, hc); err != nil {
 				return fmt.Errorf("save cache: %w", err)

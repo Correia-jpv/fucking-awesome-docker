@@ -41,6 +41,8 @@ func TestPartitionLinks(t *testing.T) {
 		"https://example.com/tool",
 		"https://github.com/moby/moby",
 		"https://github.com/user/repo/issues",
+		"dozzle",
+		"#projects",
 	}
 	gh, ext := PartitionLinks(urls)
 	if len(gh) != 2 {

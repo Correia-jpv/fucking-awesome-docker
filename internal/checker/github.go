@@ -3,6 +3,7 @@ package checker
 import (
 	"context"
 	"fmt"
+	"net/url"
 	"strings"
 	"time"
 
@@ -43,12 +44,20 @@ func ExtractGitHubRepo(url string) (owner, name string, ok bool) {
 	return parts[0], parts[1], true
 }
 
-// PartitionLinks separates URLs into GitHub repos and external links.
+func isHTTPURL(raw string) bool {
+	u, err := url.Parse(raw)
+	if err != nil {
+		return false
+	}
+	return u.Scheme == "http" || u.Scheme == "https"
+}
+
+// PartitionLinks separates URLs into GitHub repos and external HTTP(S) links.
 func PartitionLinks(urls []string) (github, external []string) {
 	for _, url := range urls {
 		if _, _, ok := ExtractGitHubRepo(url); ok {
 			github = append(github, url)
-		} else {
+		} else if isHTTPURL(url) {
 			external = append(external, url)
 		}
 	}

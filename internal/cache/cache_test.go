@@ -78,6 +78,22 @@ func TestLoadHealthCacheMissing(t *testing.T) {
 	}
 }
 
+func TestLoadHealthCacheInvalidYAML(t *testing.T) {
+	dir := t.TempDir()
+	path := filepath.Join(dir, "health.yaml")
+	if err := os.WriteFile(path, []byte("entries:\n  - url: [not yaml"), 0644); err != nil {
+		t.Fatal(err)
+	}
+
+	hc, err := LoadHealthCache(path)
+	if err == nil {
+		t.Fatal("expected error for invalid YAML")
+	}
+	if hc != nil {
+		t.Fatal("expected nil cache on invalid YAML")
+	}
+}
+
 func TestMerge(t *testing.T) {
 	hc := &HealthCache{
 		Entries: []HealthEntry{
