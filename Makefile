@@ -132,3 +132,11 @@ workflow-pr: fmt test validate ## Recommended workflow before opening a PR
 workflow-maint: health report-json-file ## Weekly maintenance workflow
 
 workflow-ci: test validate ## CI-equivalent validation workflow
+
+update-ga:
+	ratchet upgrade .github/workflows/*
+
+update-go:
+	go get -u go@latest
+	go get -u ./...
+	go mod tidy 
