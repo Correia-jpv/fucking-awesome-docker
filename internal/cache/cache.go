@@ -76,7 +76,7 @@ func SaveHealthCache(path string, hc *HealthCache) error {
 	if err != nil {
 		return err
 	}
-	return os.WriteFile(path, data, 0644)
+	return os.WriteFile(path, data, 0o644)
 }
 
 // Merge updates the cache with new entries, replacing existing ones by URL.

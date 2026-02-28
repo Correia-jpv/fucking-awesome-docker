@@ -12,7 +12,7 @@ func TestBuild(t *testing.T) {
 
 	md := "# Test List\n\n- [Example](https://example.com) - A test entry.\n"
 	mdPath := filepath.Join(dir, "README.md")
-	if err := os.WriteFile(mdPath, []byte(md), 0644); err != nil {
+	if err := os.WriteFile(mdPath, []byte(md), 0o644); err != nil {
 		t.Fatal(err)
 	}
 
@@ -23,7 +23,7 @@ func TestBuild(t *testing.T) {
 </body>
 </html>`
 	tmplPath := filepath.Join(dir, "template.html")
-	if err := os.WriteFile(tmplPath, []byte(tmpl), 0644); err != nil {
+	if err := os.WriteFile(tmplPath, []byte(tmpl), 0o644); err != nil {
 		t.Fatal(err)
 	}
 
@@ -51,7 +51,7 @@ func TestBuildWithSectionPlaceholder(t *testing.T) {
 
 	md := "# Hello\n\nWorld.\n"
 	mdPath := filepath.Join(dir, "README.md")
-	if err := os.WriteFile(mdPath, []byte(md), 0644); err != nil {
+	if err := os.WriteFile(mdPath, []byte(md), 0o644); err != nil {
 		t.Fatal(err)
 	}
 
@@ -63,7 +63,7 @@ func TestBuildWithSectionPlaceholder(t *testing.T) {
 </body>
 </html>`
 	tmplPath := filepath.Join(dir, "template.html")
-	if err := os.WriteFile(tmplPath, []byte(tmpl), 0644); err != nil {
+	if err := os.WriteFile(tmplPath, []byte(tmpl), 0o644); err != nil {
 		t.Fatal(err)
 	}
 

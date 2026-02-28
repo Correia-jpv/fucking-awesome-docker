@@ -44,7 +44,7 @@ func Build(markdownPath, templatePath, outputPath string) error {
 		output = strings.Replace(output, r.old, r.new, 1)
 	}
 
-	if err := os.WriteFile(outputPath, []byte(output), 0644); err != nil {
+	if err := os.WriteFile(outputPath, []byte(output), 0o644); err != nil {
 		return fmt.Errorf("write output: %w", err)
 	}
 	return nil

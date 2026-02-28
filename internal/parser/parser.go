@@ -110,7 +110,8 @@ func Parse(r io.Reader) (Document, error) {
 func buildTree(flat []struct {
 	section Section
 	level   int
-}) []Section {
+},
+) []Section {
 	if len(flat) == 0 {
 		return nil
 	}
