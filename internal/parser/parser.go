@@ -18,10 +18,13 @@ var entryRe = regexp.MustCompile(`^[-*]\s+\[([^\]]+)\]\(([^)]+)\)(.*?)\s+-\s+(.+
 // headingRe matches markdown headings: # Title, ## Title, etc.
 var headingRe = regexp.MustCompile(`^(#{1,6})\s+(.+?)(?:\s*<!--.*-->)?$`)
 
-var markerMap = map[string]Marker{
-	":skull:":             MarkerAbandoned,
-	":heavy_dollar_sign:": MarkerPaid,
-	":construction:":      MarkerWIP,
+var markerDefs = []struct {
+	text   string
+	marker Marker
+}{
+	{text: ":skull:", marker: MarkerAbandoned},
+	{text: ":heavy_dollar_sign:", marker: MarkerPaid},
+	{text: ":construction:", marker: MarkerWIP},
 }
 
 // ParseEntry parses a single markdown list line into an Entry.
@@ -36,11 +39,11 @@ func ParseEntry(line string, lineNum int) (Entry, error) {
 	var markers []Marker
 
 	// Extract markers from both the middle section and the description
-	for text, marker := range markerMap {
-		if strings.Contains(middle, text) || strings.Contains(desc, text) {
-			markers = append(markers, marker)
-			middle = strings.ReplaceAll(middle, text, "")
-			desc = strings.ReplaceAll(desc, text, "")
+	for _, def := range markerDefs {
+		if strings.Contains(middle, def.text) || strings.Contains(desc, def.text) {
+			markers = append(markers, def.marker)
+			middle = strings.ReplaceAll(middle, def.text, "")
+			desc = strings.ReplaceAll(desc, def.text, "")
 		}
 	}
 	desc = strings.TrimSpace(desc)

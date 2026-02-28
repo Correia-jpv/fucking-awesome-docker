@@ -25,20 +25,21 @@ type LinkResult struct {
 	Error       string
 }
 
+func shouldFallbackToGET(statusCode int) bool {
+	switch statusCode {
+	case http.StatusBadRequest, http.StatusForbidden, http.StatusMethodNotAllowed, http.StatusNotImplemented:
+		return true
+	default:
+		return false
+	}
+}
+
 // CheckLink checks a single URL. Uses HEAD first, falls back to GET.
 func CheckLink(url string, client *http.Client) LinkResult {
 	result := LinkResult{URL: url}
 
 	ctx, cancel := context.WithTimeout(context.Background(), defaultTimeout)
 	defer cancel()
-
-	// Try HEAD first
-	req, err := http.NewRequestWithContext(ctx, http.MethodHead, url, nil)
-	if err != nil {
-		result.Error = err.Error()
-		return result
-	}
-	req.Header.Set("User-Agent", userAgent)
 
 	// Track redirects
 	var finalURL string
@@ -52,16 +53,25 @@ func CheckLink(url string, client *http.Client) LinkResult {
 	}
 	defer func() { client.CheckRedirect = origCheckRedirect }()
 
-	resp, err := client.Do(req)
+	doRequest := func(method string) (*http.Response, error) {
+		req, err := http.NewRequestWithContext(ctx, method, url, nil)
+		if err != nil {
+			return nil, err
+		}
+		req.Header.Set("User-Agent", userAgent)
+		return client.Do(req)
+	}
+
+	resp, err := doRequest(http.MethodHead)
 	if err != nil {
-		// Fallback to GET
-		req, err2 := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)
-		if err2 != nil {
+		resp, err = doRequest(http.MethodGet)
+		if err != nil {
 			result.Error = err.Error()
 			return result
 		}
-		req.Header.Set("User-Agent", userAgent)
-		resp, err = client.Do(req)
+	} else if shouldFallbackToGET(resp.StatusCode) {
+		resp.Body.Close()
+		resp, err = doRequest(http.MethodGet)
 		if err != nil {
 			result.Error = err.Error()
 			return result

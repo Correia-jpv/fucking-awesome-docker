@@ -89,6 +89,7 @@ func (hc *HealthCache) Merge(entries []HealthEntry) {
 		if i, exists := index[e.URL]; exists {
 			hc.Entries[i] = e
 		} else {
+			index[e.URL] = len(hc.Entries)
 			hc.Entries = append(hc.Entries, e)
 		}
 	}

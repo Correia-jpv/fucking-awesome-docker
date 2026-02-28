@@ -121,7 +121,10 @@ func checkCmd() *cobra.Command {
 			var urls []string
 			collectURLs(doc.Sections, &urls)
 
-			exclude, _ := cache.LoadExcludeList(excludePath)
+			exclude, err := cache.LoadExcludeList(excludePath)
+			if err != nil {
+				return fmt.Errorf("load exclude list: %w", err)
+			}
 
 			ghURLs, extURLs := checker.PartitionLinks(urls)
 
@@ -138,13 +141,15 @@ func checkCmd() *cobra.Command {
 				}
 			}
 
+			var ghErrs []error
 			if !prMode {
 				token := os.Getenv("GITHUB_TOKEN")
 				if token != "" {
 					fmt.Printf("Checking %d GitHub repositories...\n", len(ghURLs))
 					gc := checker.NewGitHubChecker(token)
 					_, errs := gc.CheckRepos(context.Background(), ghURLs, 50)
-					for _, e := range errs {
+					ghErrs = errs
+					for _, e := range ghErrs {
 						fmt.Printf("  GitHub error: %v\n", e)
 					}
 				} else {
@@ -164,7 +169,15 @@ func checkCmd() *cobra.Command {
 				for _, r := range broken {
 					fmt.Printf("  %s -> %d %s\n", r.URL, r.StatusCode, r.Error)
 				}
+			}
+			if len(broken) > 0 && len(ghErrs) > 0 {
+				return fmt.Errorf("found %d broken links and %d GitHub API errors", len(broken), len(ghErrs))
+			}
+			if len(broken) > 0 {
 				return fmt.Errorf("found %d broken links", len(broken))
+			}
+			if len(ghErrs) > 0 {
+				return fmt.Errorf("github checks failed with %d errors", len(ghErrs))
 			}
 
 			fmt.Println("All links OK")
@@ -256,11 +269,12 @@ func reportCmd() *cobra.Command {
 			var scored []scorer.ScoredEntry
 			for _, e := range hc.Entries {
 				scored = append(scored, scorer.ScoredEntry{
-					URL:      e.URL,
-					Name:     e.Name,
-					Status:   scorer.Status(e.Status),
-					Stars:    e.Stars,
-					LastPush: e.LastPush,
+					URL:        e.URL,
+					Name:       e.Name,
+					Status:     scorer.Status(e.Status),
+					Stars:      e.Stars,
+					HasLicense: e.HasLicense,
+					LastPush:   e.LastPush,
 				})
 			}
 
@@ -307,7 +321,10 @@ func validateCmd() *cobra.Command {
 			fmt.Println("\n=== Checking links (PR mode) ===")
 			var urls []string
 			collectURLs(doc.Sections, &urls)
-			exclude, _ := cache.LoadExcludeList(excludePath)
+			exclude, err := cache.LoadExcludeList(excludePath)
+			if err != nil {
+				return fmt.Errorf("load exclude list: %w", err)
+			}
 			_, extURLs := checker.PartitionLinks(urls)
 
 			fmt.Printf("Checking %d external links...\n", len(extURLs))

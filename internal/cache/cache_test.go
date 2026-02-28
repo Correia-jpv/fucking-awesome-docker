@@ -119,3 +119,19 @@ func TestMerge(t *testing.T) {
 		t.Errorf("last entry = %q, want C", hc.Entries[2].Name)
 	}
 }
+
+func TestMergeDeduplicatesIncomingBatch(t *testing.T) {
+	hc := &HealthCache{}
+
+	hc.Merge([]HealthEntry{
+		{URL: "https://github.com/c/c", Name: "C", Stars: 1},
+		{URL: "https://github.com/c/c", Name: "C", Stars: 2},
+	})
+
+	if len(hc.Entries) != 1 {
+		t.Fatalf("entries = %d, want 1", len(hc.Entries))
+	}
+	if hc.Entries[0].Stars != 2 {
+		t.Fatalf("stars = %d, want last value 2", hc.Entries[0].Stars)
+	}
+}

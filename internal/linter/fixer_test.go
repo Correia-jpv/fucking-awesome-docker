@@ -138,3 +138,56 @@ Some text here.
 		t.Errorf("expected period added, got:\n%s", result)
 	}
 }
+
+func TestFixFileSortsAcrossBlankLinesAndIsIdempotent(t *testing.T) {
+	content := `# Awesome Docker
+
+## Tools
+
+- [Zulu](https://example.com/zulu) - z tool
+
+- [Alpha](https://example.com/alpha) - a tool
+`
+
+	tmp, err := os.CreateTemp("", "readme-*.md")
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer os.Remove(tmp.Name())
+
+	if _, err := tmp.WriteString(content); err != nil {
+		t.Fatal(err)
+	}
+	tmp.Close()
+
+	firstCount, err := FixFile(tmp.Name())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if firstCount == 0 {
+		t.Fatal("expected first run to apply fixes")
+	}
+
+	firstData, err := os.ReadFile(tmp.Name())
+	if err != nil {
+		t.Fatal(err)
+	}
+	firstResult := string(firstData)
+
+	alphaIdx := strings.Index(firstResult, "[Alpha]")
+	zuluIdx := strings.Index(firstResult, "[Zulu]")
+	if alphaIdx == -1 || zuluIdx == -1 {
+		t.Fatalf("expected both Alpha and Zulu in result:\n%s", firstResult)
+	}
+	if alphaIdx > zuluIdx {
+		t.Fatalf("expected Alpha before Zulu after fix:\n%s", firstResult)
+	}
+
+	secondCount, err := FixFile(tmp.Name())
+	if err != nil {
+		t.Fatal(err)
+	}
+	if secondCount != 0 {
+		t.Fatalf("expected second run to be idempotent, got %d changes", secondCount)
+	}
+}

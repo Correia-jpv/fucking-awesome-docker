@@ -20,6 +20,9 @@ var attributionRe = regexp.MustCompile(`\s+(?:(?:[Cc]reated|[Mm]aintained|[Bb]ui
 // bareAttributionRe matches: by @author at end of line (no link).
 var bareAttributionRe = regexp.MustCompile(`\s+by\s+@\w+\.?$`)
 
+// sectionHeadingRe matches markdown headings.
+var sectionHeadingRe = regexp.MustCompile(`^(#{1,6})\s+(.+?)(?:\s*<!--.*-->)?$`)
+
 // RemoveAttribution strips author attribution from a description string.
 func RemoveAttribution(desc string) string {
 	desc = attributionRe.ReplaceAllString(desc, "")
@@ -47,12 +50,6 @@ func FormatEntry(e parser.Entry) string {
 	return fmt.Sprintf("- [%s](%s) - %s", e.Name, e.URL, desc)
 }
 
-// entryGroup tracks a consecutive run of entry lines.
-type entryGroup struct {
-	startIdx int // index in lines slice
-	entries  []parser.Entry
-}
-
 // FixFile reads the README, fixes entries (capitalize, period, remove attribution,
 // sort), and writes the result back.
 func FixFile(path string) (int, error) {
@@ -71,34 +68,39 @@ func FixFile(path string) (int, error) {
 		return 0, err
 	}
 
-	// Identify entry groups (consecutive parsed entry lines)
-	var groups []entryGroup
-	var current *entryGroup
 	fixCount := 0
 
+	var headingLines []int
 	for i, line := range lines {
-		entry, err := parser.ParseEntry(line, i+1)
-		if err != nil {
-			// Not an entry — close any active group
-			if current != nil {
-				groups = append(groups, *current)
-				current = nil
-			}
-			continue
+		if sectionHeadingRe.MatchString(line) {
+			headingLines = append(headingLines, i)
 		}
-		if current == nil {
-			current = &entryGroup{startIdx: i}
-		}
-		current.entries = append(current.entries, entry)
-	}
-	if current != nil {
-		groups = append(groups, *current)
 	}
 
-	// Process each group: fix entries, sort, replace lines
-	for _, g := range groups {
+	// Process each heading block independently to match linter sort scope.
+	for i, headingIdx := range headingLines {
+		start := headingIdx + 1
+		end := len(lines)
+		if i+1 < len(headingLines) {
+			end = headingLines[i+1]
+		}
+
+		var entryPositions []int
+		var entries []parser.Entry
+		for lineIdx := start; lineIdx < end; lineIdx++ {
+			entry, err := parser.ParseEntry(lines[lineIdx], lineIdx+1)
+			if err != nil {
+				continue
+			}
+			entryPositions = append(entryPositions, lineIdx)
+			entries = append(entries, entry)
+		}
+		if len(entries) == 0 {
+			continue
+		}
+
 		var fixed []parser.Entry
-		for _, e := range g.entries {
+		for _, e := range entries {
 			f := FixEntry(e)
 			f.Description = RemoveAttribution(f.Description)
 			// Re-apply period after removing attribution (it may have been stripped)
@@ -109,13 +111,12 @@ func FixFile(path string) (int, error) {
 		}
 
 		sorted := SortEntries(fixed)
-
 		for j, e := range sorted {
 			newLine := FormatEntry(e)
-			idx := g.startIdx + j
-			if lines[idx] != newLine {
+			lineIdx := entryPositions[j]
+			if lines[lineIdx] != newLine {
 				fixCount++
-				lines[idx] = newLine
+				lines[lineIdx] = newLine
 			}
 		}
 	}

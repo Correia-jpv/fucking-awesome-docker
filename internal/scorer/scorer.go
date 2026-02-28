@@ -23,12 +23,13 @@ const (
 
 // ScoredEntry is a repo with its computed health status.
 type ScoredEntry struct {
-	URL      string
-	Name     string
-	Status   Status
-	Stars    int
-	Forks    int
-	LastPush time.Time
+	URL        string
+	Name       string
+	Status     Status
+	Stars      int
+	Forks      int
+	HasLicense bool
+	LastPush   time.Time
 }
 
 // ReportSummary contains grouped status counts.
@@ -75,12 +76,13 @@ func ScoreAll(infos []checker.RepoInfo) []ScoredEntry {
 	results := make([]ScoredEntry, len(infos))
 	for i, info := range infos {
 		results[i] = ScoredEntry{
-			URL:      info.URL,
-			Name:     fmt.Sprintf("%s/%s", info.Owner, info.Name),
-			Status:   Score(info),
-			Stars:    info.Stars,
-			Forks:    info.Forks,
-			LastPush: info.PushedAt,
+			URL:        info.URL,
+			Name:       fmt.Sprintf("%s/%s", info.Owner, info.Name),
+			Status:     Score(info),
+			Stars:      info.Stars,
+			Forks:      info.Forks,
+			HasLicense: info.HasLicense,
+			LastPush:   info.PushedAt,
 		}
 	}
 	return results
@@ -92,13 +94,14 @@ func ToCacheEntries(scored []ScoredEntry) []cache.HealthEntry {
 	now := time.Now().UTC()
 	for i, s := range scored {
 		entries[i] = cache.HealthEntry{
-			URL:       s.URL,
-			Name:      s.Name,
-			Status:    string(s.Status),
-			Stars:     s.Stars,
-			Forks:     s.Forks,
-			LastPush:  s.LastPush,
-			CheckedAt: now,
+			URL:        s.URL,
+			Name:       s.Name,
+			Status:     string(s.Status),
+			Stars:      s.Stars,
+			Forks:      s.Forks,
+			HasLicense: s.HasLicense,
+			LastPush:   s.LastPush,
+			CheckedAt:  now,
 		}
 	}
 	return entries

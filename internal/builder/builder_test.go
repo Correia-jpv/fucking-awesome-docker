@@ -111,3 +111,23 @@ func TestBuildRealREADME(t *testing.T) {
 	}
 	t.Logf("Generated %d bytes", info.Size())
 }
+
+func TestBuildFailsWithoutPlaceholder(t *testing.T) {
+	dir := t.TempDir()
+
+	mdPath := filepath.Join(dir, "README.md")
+	if err := os.WriteFile(mdPath, []byte("# Title\n"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+
+	tmplPath := filepath.Join(dir, "template.html")
+	if err := os.WriteFile(tmplPath, []byte("<html><body><main></main></body></html>"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+
+	outPath := filepath.Join(dir, "index.html")
+	err := Build(mdPath, tmplPath, outPath)
+	if err == nil {
+		t.Fatal("expected Build to fail when template has no supported placeholder")
+	}
+}

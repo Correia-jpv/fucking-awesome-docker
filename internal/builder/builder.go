@@ -36,12 +36,30 @@ func Build(markdownPath, templatePath, outputPath string) error {
 
 	// Inject into template — support both placeholder formats
 	output := string(tmpl)
-	replacements := []struct{ old, new string }{
-		{`<div id="md"></div>`, `<div id="md">` + buf.String() + `</div>`},
-		{`<section id="md" class="main-content"></section>`, `<section id="md" class="main-content">` + buf.String() + `</section>`},
+	replacements := []struct {
+		old string
+		new string
+	}{
+		{
+			old: `<div id="md"></div>`,
+			new: `<div id="md">` + buf.String() + `</div>`,
+		},
+		{
+			old: `<section id="md" class="main-content"></section>`,
+			new: `<section id="md" class="main-content">` + buf.String() + `</section>`,
+		},
 	}
+
+	replaced := false
 	for _, r := range replacements {
-		output = strings.Replace(output, r.old, r.new, 1)
+		if strings.Contains(output, r.old) {
+			output = strings.Replace(output, r.old, r.new, 1)
+			replaced = true
+			break
+		}
+	}
+	if !replaced {
+		return fmt.Errorf("template missing supported markdown placeholder")
 	}
 
 	if err := os.WriteFile(outputPath, []byte(output), 0o644); err != nil {

@@ -54,6 +54,20 @@ func TestParseEntryMultipleMarkers(t *testing.T) {
 	}
 }
 
+func TestParseEntryMarkersCanonicalOrder(t *testing.T) {
+	line := `- [SomeProject](https://example.com) - :construction: A project. :skull:`
+	entry, err := ParseEntry(line, 1)
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+	if len(entry.Markers) != 2 {
+		t.Fatalf("markers count = %d, want 2", len(entry.Markers))
+	}
+	if entry.Markers[0] != MarkerAbandoned || entry.Markers[1] != MarkerWIP {
+		t.Fatalf("marker order = %v, want [MarkerAbandoned MarkerWIP]", entry.Markers)
+	}
+}
+
 func TestParseDocument(t *testing.T) {
 	input := `# Awesome Docker
 

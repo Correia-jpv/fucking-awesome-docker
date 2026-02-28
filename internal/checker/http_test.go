@@ -78,3 +78,41 @@ func TestCheckLinks(t *testing.T) {
 		}
 	}
 }
+
+func TestCheckLinkFallbackToGETOnMethodNotAllowed(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.Method == http.MethodHead {
+			w.WriteHeader(http.StatusMethodNotAllowed)
+			return
+		}
+		w.WriteHeader(http.StatusOK)
+	}))
+	defer server.Close()
+
+	result := CheckLink(server.URL, &http.Client{})
+	if !result.OK {
+		t.Errorf("expected OK after GET fallback, got status %d, error: %s", result.StatusCode, result.Error)
+	}
+	if result.StatusCode != http.StatusOK {
+		t.Errorf("status = %d, want 200", result.StatusCode)
+	}
+}
+
+func TestCheckLinkFallbackToGETOnForbiddenHead(t *testing.T) {
+	server := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.Method == http.MethodHead {
+			w.WriteHeader(http.StatusForbidden)
+			return
+		}
+		w.WriteHeader(http.StatusOK)
+	}))
+	defer server.Close()
+
+	result := CheckLink(server.URL, &http.Client{})
+	if !result.OK {
+		t.Errorf("expected OK after GET fallback, got status %d, error: %s", result.StatusCode, result.Error)
+	}
+	if result.StatusCode != http.StatusOK {
+		t.Errorf("status = %d, want 200", result.StatusCode)
+	}
+}
