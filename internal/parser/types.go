@@ -30,6 +30,6 @@ type Section struct {
 
 // Document is the parsed representation of the full README.
 type Document struct {
-	Preamble []string  // lines before the first section
+	Preamble []string // lines before the first section
 	Sections []Section
 }

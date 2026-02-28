@@ -11,8 +11,8 @@ import (
 // entryRe matches: - [Name](URL) - Description
 // Also handles optional markers/text between URL and " - " separator, e.g.:
 //
-//	- [Name](URL) :skull: - Description
-//	- [Name](URL) (2) :skull: - Description
+//   - [Name](URL) :skull: - Description
+//   - [Name](URL) (2) :skull: - Description
 var entryRe = regexp.MustCompile(`^[-*]\s+\[([^\]]+)\]\(([^)]+)\)(.*?)\s+-\s+(.+)$`)
 
 // headingRe matches markdown headings: # Title, ## Title, etc.
