@@ -5,9 +5,14 @@ on:
     - cron: "0 9 * * 1"
   workflow_dispatch:
 
+concurrency:
+  group: health-report-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   health-check:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: read
       issues: write
@@ -22,21 +27,11 @@ jobs:
       - name: Build
         run: go build -o awesome-docker ./cmd/awesome-docker
 
-      - name: Run Health Scoring
-        run: ./awesome-docker health
-        continue-on-error: true
+      - name: Run Health + Report
+        id: report
+        run: ./awesome-docker ci health-report --issue-file health_report.txt --github-output "$GITHUB_OUTPUT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate Report
-        id: report
-        run: |
-          ./awesome-docker report > health_report.txt 2>&1 || true
-          if [ -s health_report.txt ]; then
-            echo "has_report=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "has_report=false" >> "$GITHUB_OUTPUT"
-          fi
 
       - name: Create/Update Issue with Health Report
         if: steps.report.outputs.has_report == 'true'
@@ -45,8 +40,7 @@ jobs:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('health_report.txt', 'utf8');
-
-            const issueBody = report + '\n\n---\n*Auto-generated weekly by health_report.yml*';
+            const issueBody = report;
 
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
