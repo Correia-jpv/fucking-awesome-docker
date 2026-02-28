@@ -2,56 +2,46 @@ name: Weekly Health Report
 
 on:
   schedule:
-    # Run every Monday at 9 AM UTC
     - cron: "0 9 * * 1"
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch:
+
+concurrency:
+  group: health-report-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   health-check:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
-      contents: write
+      contents: read
       issues: write
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # ratchet:actions/checkout@v6.0.2
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # ratchet:actions/checkout@v6
 
-      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # ratchet:actions/setup-node@v6.2.0
+      - uses: actions/setup-go@4b73464bb391d4059bd26b0524d20df3927bd417 # ratchet:actions/setup-go@v6
         with:
-          node-version: lts/*
+          go-version-file: go.mod
 
-      - uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # ratchet:actions/cache@v5.0.3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      - name: Build
+        run: go build -o awesome-docker ./cmd/awesome-docker
 
-      - name: Install Dependencies
-        run: npm ci --ignore-scripts --no-audit --no-progress --prefer-offline
-
-      - name: Run Health Check
-        run: node tests/health_check.mjs
-        continue-on-error: true
+      - name: Run Health + Report
+        id: report
+        run: ./awesome-docker ci health-report --issue-file health_report.txt --github-output "$GITHUB_OUTPUT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload Health Report
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # ratchet:actions/upload-artifact@v5
-        with:
-          name: health-report
-          path: HEALTH_REPORT.md
-
-      - name: Create Issue with Health Report
+      - name: Create/Update Issue with Health Report
+        if: steps.report.outputs.has_report == 'true'
         uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # ratchet:actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
+            const report = fs.readFileSync('health_report.txt', 'utf8');
+            const issueBody = report;
 
-            // Read the health report
-            const report = fs.readFileSync('HEALTH_REPORT.md', 'utf8');
-
-            // Check if there's already an open issue
             const issues = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -60,25 +50,19 @@ jobs:
               per_page: 1
             });
 
-            const issueBody = report + '\n\n---\n*This report is auto-generated weekly. See [health_check.mjs](https://github.com/veggiemonk/awesome-docker/blob/master/tests/health_check.mjs) for details.*';
-
             if (issues.data.length > 0) {
-              // Update existing issue
               await github.rest.issues.update({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: issues.data[0].number,
                 body: issueBody
               });
-              console.log(`Updated issue #${issues.data[0].number}`);
             } else {
-              // Create new issue
-              const issue = await github.rest.issues.create({
+              await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                title: '🏥 Weekly Health Report - Repository Maintenance Needed',
+                title: 'Weekly Health Report - Repository Maintenance Needed',
                 body: issueBody,
                 labels: ['health-report', 'maintenance']
               });
-              console.log(`Created issue #${issue.data.number}`);
             }
