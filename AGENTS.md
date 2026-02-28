@@ -2,14 +2,22 @@
 
 ## Commands
 - Build CLI: `make build` (or `go build -o awesome-docker ./cmd/awesome-docker`)
+- Rebuild from scratch: `make rebuild`
+- Show local workflows: `make help`
+- Format Go code: `make fmt`
 - Run tests: `make test` (runs `go test ./internal/... -v`)
+- Race tests: `make test-race`
 - Lint README rules: `make lint` (runs `./awesome-docker lint`)
-- Auto-fix lint issues: `./awesome-docker lint --fix`
+- Auto-fix lint issues: `make lint-fix`
 - Check links: `make check` (runs `./awesome-docker check`; `GITHUB_TOKEN` enables GitHub repo checks)
-- PR validation: `./awesome-docker validate` (lint + external link checks in PR mode)
-- Build website: `./awesome-docker build` (generates `website/index.html` from `README.md`)
-- Health scoring: `make health` (requires `GITHUB_TOKEN`, updates `config/health_cache.yaml`)
-- Generate health report: `make report`
+- PR-safe link checks: `make check-pr`
+- PR validation: `make validate` (lint + external link checks in PR mode)
+- Build website: `make website` (generates `website/index.html` from `README.md`)
+- Health scoring: `make health` (requires `GITHUB_TOKEN`, refreshes `config/health_cache.yaml`)
+- Print health report (Markdown): `make report`
+- Print health report (JSON): `make report-json` or `./awesome-docker report --json`
+- Generate report files: `make report-file` (`HEALTH_REPORT.md`) and `make report-json-file` (`HEALTH_REPORT.json`)
+- Maintenance shortcut: `make workflow-maint` (health + JSON report file)
 
 ## Architecture
 - **Main content**: `README.md` (curated Docker/container resources)
@@ -25,7 +33,11 @@
   - `config/exclude.yaml` - known link-check exclusions
   - `config/website.tmpl.html` - HTML template for site generation
   - `config/health_cache.yaml` - persisted health scoring cache
-- **Website output**: `website/index.html`
+- **Generated outputs**:
+  - `awesome-docker` - compiled CLI binary
+  - `website/index.html` - generated website
+  - `HEALTH_REPORT.md` - generated markdown report
+  - `HEALTH_REPORT.json` - generated JSON report
 
 ## Code Style
 - **Language**: Go
@@ -46,6 +58,15 @@
   - Opens/updates `health-report` issue
 - **GitHub Pages deploy**: `.github/workflows/deploy-pages.yml`
   - On push to `master`, builds CLI, runs `./awesome-docker build`, deploys `website/`
+
+## Makefile Workflow
+- The `Makefile` models file dependencies for generated artifacts (`awesome-docker`, `website/index.html`, `config/health_cache.yaml`, `HEALTH_REPORT.md`, `HEALTH_REPORT.json`).
+- Prefer `make` targets over ad-hoc command sequences so dependency and regeneration behavior stays consistent.
+- Use:
+  - `make workflow-dev` for local iteration
+  - `make workflow-pr` before opening/updating a PR
+  - `make workflow-maint` for health/report maintenance
+  - `make workflow-ci` for CI-equivalent local checks
 
 ## Content Guidelines (from CONTRIBUTING.md)
 - Use one link per entry
