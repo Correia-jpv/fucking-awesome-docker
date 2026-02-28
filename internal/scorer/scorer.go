@@ -1,6 +1,7 @@
 package scorer
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 	"time"
@@ -28,6 +29,24 @@ type ScoredEntry struct {
 	Stars    int
 	Forks    int
 	LastPush time.Time
+}
+
+// ReportSummary contains grouped status counts.
+type ReportSummary struct {
+	Healthy  int `json:"healthy"`
+	Inactive int `json:"inactive"`
+	Stale    int `json:"stale"`
+	Archived int `json:"archived"`
+	Dead     int `json:"dead"`
+}
+
+// ReportData is the full machine-readable report model.
+type ReportData struct {
+	GeneratedAt time.Time                `json:"generated_at"`
+	Total       int                      `json:"total"`
+	Summary     ReportSummary            `json:"summary"`
+	Entries     []ScoredEntry            `json:"entries"`
+	ByStatus    map[Status][]ScoredEntry `json:"by_status"`
 }
 
 // Score computes the health status of a GitHub repo.
@@ -89,45 +108,64 @@ func ToCacheEntries(scored []ScoredEntry) []cache.HealthEntry {
 func GenerateReport(scored []ScoredEntry) string {
 	var b strings.Builder
 
-	groups := map[Status][]ScoredEntry{}
-	for _, s := range scored {
-		groups[s.Status] = append(groups[s.Status], s)
-	}
+	data := BuildReportData(scored)
+	groups := data.ByStatus
 
 	fmt.Fprintf(&b, "# Health Report\n\n")
-	fmt.Fprintf(&b, "**Generated:** %s\n\n", time.Now().UTC().Format(time.RFC3339))
-	fmt.Fprintf(&b, "**Total:** %d repositories\n\n", len(scored))
+	fmt.Fprintf(&b, "**Generated:** %s\n\n", data.GeneratedAt.Format(time.RFC3339))
+	fmt.Fprintf(&b, "**Total:** %d repositories\n\n", data.Total)
 
 	fmt.Fprintf(&b, "## Summary\n\n")
-	fmt.Fprintf(&b, "- Healthy: %d\n", len(groups[StatusHealthy]))
-	fmt.Fprintf(&b, "- Inactive (1-2 years): %d\n", len(groups[StatusInactive]))
-	fmt.Fprintf(&b, "- Stale (2+ years): %d\n", len(groups[StatusStale]))
-	fmt.Fprintf(&b, "- Archived: %d\n", len(groups[StatusArchived]))
-	fmt.Fprintf(&b, "- Dead: %d\n\n", len(groups[StatusDead]))
+	fmt.Fprintf(&b, "- Healthy: %d\n", data.Summary.Healthy)
+	fmt.Fprintf(&b, "- Inactive (1-2 years): %d\n", data.Summary.Inactive)
+	fmt.Fprintf(&b, "- Stale (2+ years): %d\n", data.Summary.Stale)
+	fmt.Fprintf(&b, "- Archived: %d\n", data.Summary.Archived)
+	fmt.Fprintf(&b, "- Dead: %d\n\n", data.Summary.Dead)
 
-	writeSection := func(title string, status Status, limit int) {
+	writeSection := func(title string, status Status) {
 		entries := groups[status]
 		if len(entries) == 0 {
 			return
 		}
 		fmt.Fprintf(&b, "## %s\n\n", title)
-		count := len(entries)
-		if limit > 0 && count > limit {
-			count = limit
-		}
-		for _, e := range entries[:count] {
+		for _, e := range entries {
 			fmt.Fprintf(&b, "- [%s](%s) - Stars: %d - Last push: %s\n",
 				e.Name, e.URL, e.Stars, e.LastPush.Format("2006-01-02"))
-		}
-		if len(entries) > count {
-			fmt.Fprintf(&b, "\n... and %d more\n", len(entries)-count)
 		}
 		b.WriteString("\n")
 	}
 
-	writeSection("Archived (should mark :skull:)", StatusArchived, 0)
-	writeSection("Stale (2+ years inactive)", StatusStale, 50)
-	writeSection("Inactive (1-2 years)", StatusInactive, 30)
+	writeSection("Archived (should mark :skull:)", StatusArchived)
+	writeSection("Stale (2+ years inactive)", StatusStale)
+	writeSection("Inactive (1-2 years)", StatusInactive)
 
 	return b.String()
+}
+
+// BuildReportData returns full report data for machine-readable and markdown rendering.
+func BuildReportData(scored []ScoredEntry) ReportData {
+	groups := map[Status][]ScoredEntry{}
+	for _, s := range scored {
+		groups[s.Status] = append(groups[s.Status], s)
+	}
+
+	return ReportData{
+		GeneratedAt: time.Now().UTC(),
+		Total:       len(scored),
+		Summary: ReportSummary{
+			Healthy:  len(groups[StatusHealthy]),
+			Inactive: len(groups[StatusInactive]),
+			Stale:    len(groups[StatusStale]),
+			Archived: len(groups[StatusArchived]),
+			Dead:     len(groups[StatusDead]),
+		},
+		Entries:  scored,
+		ByStatus: groups,
+	}
+}
+
+// GenerateJSONReport returns the full report as pretty-printed JSON.
+func GenerateJSONReport(scored []ScoredEntry) ([]byte, error) {
+	data := BuildReportData(scored)
+	return json.MarshalIndent(data, "", "  ")
 }

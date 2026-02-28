@@ -1,6 +1,8 @@
 package scorer
 
 import (
+	"encoding/json"
+	"fmt"
 	"strings"
 	"testing"
 	"time"
@@ -79,6 +81,68 @@ func TestGenerateReport(t *testing.T) {
 	}
 	if !strings.Contains(report, "Stale") {
 		t.Error("report should contain 'Stale'")
+	}
+}
+
+func TestGenerateReportShowsAllEntries(t *testing.T) {
+	var results []ScoredEntry
+	for i := 0; i < 55; i++ {
+		results = append(results, ScoredEntry{
+			URL:      fmt.Sprintf("https://github.com/stale/%d", i),
+			Name:     fmt.Sprintf("stale/%d", i),
+			Status:   StatusStale,
+			Stars:    i,
+			LastPush: time.Now().AddDate(-3, 0, 0),
+		})
+	}
+
+	report := GenerateReport(results)
+	if strings.Contains(report, "... and") {
+		t.Fatal("report should not be truncated")
+	}
+	if !strings.Contains(report, "stale/54") {
+		t.Fatal("report should contain all entries")
+	}
+}
+
+func TestGenerateJSONReport(t *testing.T) {
+	results := []ScoredEntry{
+		{
+			URL:      "https://github.com/a/a",
+			Name:     "a/a",
+			Status:   StatusHealthy,
+			Stars:    100,
+			LastPush: time.Now(),
+		},
+		{
+			URL:      "https://github.com/b/b",
+			Name:     "b/b",
+			Status:   StatusStale,
+			Stars:    50,
+			LastPush: time.Now().AddDate(-3, 0, 0),
+		},
+	}
+
+	data, err := GenerateJSONReport(results)
+	if err != nil {
+		t.Fatalf("GenerateJSONReport() error = %v", err)
+	}
+
+	var report ReportData
+	if err := json.Unmarshal(data, &report); err != nil {
+		t.Fatalf("json.Unmarshal() error = %v", err)
+	}
+	if report.Total != 2 {
+		t.Fatalf("report.Total = %d, want 2", report.Total)
+	}
+	if report.Summary.Healthy != 1 || report.Summary.Stale != 1 {
+		t.Fatalf("summary = %+v, want healthy=1 stale=1", report.Summary)
+	}
+	if len(report.Entries) != 2 {
+		t.Fatalf("len(report.Entries) = %d, want 2", len(report.Entries))
+	}
+	if len(report.ByStatus[StatusStale]) != 1 {
+		t.Fatalf("len(report.ByStatus[stale]) = %d, want 1", len(report.ByStatus[StatusStale]))
 	}
 }
 

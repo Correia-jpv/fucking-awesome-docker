@@ -240,7 +240,8 @@ func buildCmd() *cobra.Command {
 }
 
 func reportCmd() *cobra.Command {
-	return &cobra.Command{
+	var jsonOutput bool
+	cmd := &cobra.Command{
 		Use:   "report",
 		Short: "Generate health report from cache",
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -263,11 +264,23 @@ func reportCmd() *cobra.Command {
 				})
 			}
 
+			if jsonOutput {
+				payload, err := scorer.GenerateJSONReport(scored)
+				if err != nil {
+					return fmt.Errorf("json report: %w", err)
+				}
+				fmt.Println(string(payload))
+				return nil
+			}
+
 			report := scorer.GenerateReport(scored)
 			fmt.Print(report)
 			return nil
 		},
 	}
+
+	cmd.Flags().BoolVar(&jsonOutput, "json", false, "Output full health report as JSON")
+	return cmd
 }
 
 func validateCmd() *cobra.Command {
